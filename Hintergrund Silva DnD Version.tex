@@ -1,6 +1,6 @@
 \author{Cedar Urwyler}
 \documentclass[10pt,twoside,twocolumn,openany]{book}
-\usepackage[bg-none]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -8,7 +8,11 @@
 \usepackage{csvsimple}
 \usepackage{tabularx}
 
-
+% Font magic (XeLatex only) % !TeX program = xelatex
+%\usepackage{fontspec}
+%\newfontfamily\myfamily{Jellyka Castle's Queen}[Scale=2]
+%\titleformat*{\chapter}{\myfamily\Huge}
+%\titleformat*{\section}{\myfamily\Large}
 
 %\makeatother
 
@@ -16,7 +20,7 @@
 
 
 \begin{document}
-\maketitle
+%\maketitle
 \tableofcontents
 
 \chapter{Einführung}
@@ -38,9 +42,9 @@ Abgesehen von der althergebrachten Forschung der Gilden und Adelshöfen wird in 
 \subsubsection{Wo bleibt Gott?}
 Zwar sagen die Priester und Kirchen der grossen Imperien, dass es einen Gott gebe, der ihnen ihre Visionen und mystischen Kräfte schenkt, aber gesehen hat ihn noch niemand. Auch verehrt man in anderen Teilen der Welt einen anderen Gott (oder gar mehrere) und sogar heidnische Mystiker und Ketzer scheinen in seltenen Fällen die gleichen Wunder zu wirken, wie die frömmsten Priester.
 
-\begin{table}[b]
+\begin{table}[h]
 	\begin{commentbox}{Lektüreliste}
-		Einige Literaturempfehlungen, die Silva beieinflusst haben:
+		Einige Literaturempfehlungen, die Silva beeinflusst haben:
 		\begin{itemize}
 			\item Die \emph{Klippenland-Chroniken} von Paul Stewart und Chris Riddell
 			%\item Die verlorenen Reiche I-IV von Greg Keyes
@@ -221,7 +225,7 @@ Der Rat der Adelshäuser wählt den Imperator aus ihren Reihen. Er hat jedoch me
 \end{itemize}
 
 \subsection{Serebryany Bor (Protektorat)}
-Die Provinz Serebryany Bor wird von tyrannischen Kleinfürsten regiert. Und nicht nur in den Wäldern treiben sich, bedingt durch die unmittelbare Nähe zu Daemonia widernatürliche Gestalten herum: Von manch einem Landherr heisst es, er sei ein Vampir, der sich in der Nacht aus seinem Sarg erhebt und sich über zarte Jungfrauen hermacht. Auch der gelegentliche Werwolf wird dort gesichtet und dann vom Pöbel zum Scheiterhaufen gebracht, auch wenn es der herzensgute Dorfpfarrer sein sollte, der zu viele Haare hat. Der Menschenschlag dort ist misstrauisch, gemein und hinterhältig.
+Die Provinz Serebryany Bor (tiefwäldisch: Silberwald) wird von tyrannischen Kleinfürsten regiert. Und nicht nur in den Wäldern treiben sich, bedingt durch die unmittelbare Nähe zu Daemonia widernatürliche Gestalten herum: Von manch einem Landherr heisst es, er sei ein Vampir, der sich in der Nacht aus seinem Sarg erhebt und sich über zarte Jungfrauen hermacht. Auch der gelegentliche Werwolf wird dort gesichtet und dann vom Pöbel zum Scheiterhaufen gebracht, auch wenn es der herzensgute Dorfpfarrer sein sollte, der zu viele Haare hat. Der Menschenschlag dort ist misstrauisch, gemein und hinterhältig.
 
 %Tiefwald-Stadt
 \subsection{Tiefwald-Stadt}
