@@ -1,0 +1,20 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {}Kreaturenregeln}{1}
+\contentsline {subsubsection}{\numberline {}Gnoll-Krieger}{1}
+\contentsline {subsubsection}{\numberline {}Gnome als Spielerrasse}{2}
+\contentsline {subsubsection}{\numberline {}Goblins als Spielerrasse}{2}
+\contentsline {subsubsection}{\numberline {}Regeln f\IeC {\"u}r Oger}{2}
+\contentsline {subsubsection}{\numberline {}Squigs}{2}
+\contentsline {subsubsection}{\numberline {}Wichte}{3}
+\contentsline {section}{\numberline {}weitere Regeln}{4}
+\contentsline {subsubsection}{\numberline {}Segnungen, Liturgien und Zeremonien}{4}
+\contentsline {subsubsection}{\numberline {}Tradition der Schattenhexen}{4}
+\contentsline {subsubsection}{\numberline {}Schiesspulverwaffen}{5}
+\contentsline {paragraph}{Schiessen}{5}
+\contentsline {paragraph}{Laden}{5}
+\contentsline {paragraph}{Falsches Kaliber}{5}
+\contentsline {paragraph}{Reichweite*}{5}
+\contentsline {subsubsection}{\numberline {}SF: Umgang mit Schwarzpulver}{5}
+\contentsline {subsubsection}{\numberline {}Liturgien und Zeremonien erlernen}{5}
+\contentsline {subsubsection}{\numberline {}Optional: Keine Gegengottheiten}{5}
+\contentsline {subsubsection}{\numberline {}Mysterienkult um den Feilscher, den Henker \& den Rabenvater}{6}

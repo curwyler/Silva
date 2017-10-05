@@ -1,0 +1,886 @@
+% !TeX program = xelatex
+%\documentclass[]{book}
+\author{Cedar Urwyler}
+\documentclass[10pt,twoside,twocolumn,openany]{book}
+\usepackage[bg-letter]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage[width=18cm, top=4cm, headsep=1.5cm]{geometry}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1 cm}
+%\setlength{\columnseprule}{0.05pt}
+
+\usepackage{xcolor}
+\usepackage{framed}
+\colorlet{shadecolor}{brown!20} %Boxfarbe
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+%\titleformat{\paragraph}[wrap]{\bf}{}{}{}
+
+\newfontfamily{\king}{[the_King__26_Queen_font.ttf]}
+
+
+\makeatother
+
+\titleformat{\chapter}[display]
+{\king}
+{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\titleformat*{\section}{\bfseries\LARGE \titlerule     }
+\titlespacing{\section}{0pt}{3cm}{1cm}
+
+\newenvironment{mcolsec}[1]{\newpage \section{#1}\begin{multicols}{2}}{
+\end{multicols}}
+
+\newenvironment{mcolsec*}[1]{\section{#1}\begin{multicols}{2}}{
+\end{multicols}}
+
+\titleformat*{\section}{\king \LARGE}
+
+\pagestyle{plain}
+
+\title{Die Chroniken von Silva}
+
+
+\begin{document}
+\tableofcontents
+
+
+
+\chapter{Einführung}
+\begin{multicols}{2}
+\paragraph{Knotenpunkte der Macht} Die Welt von Silva ist geprägt von Stätten der Macht, Punkten, wo sich unerklärliche Mächte ballen. Manche dieser Stätten sind ruhige idyllische Plätze, wo Mensch und Natur friedlich zusammenleben, manche sind verdorbene Orte, wo Chaos und Fäulnis aus der gespaltenen Erdoberfläche fliesst wie Eiter aus einer Wunde. Unergründliche Energien und Wesenheiten, die in ihrer Form und Wesen nicht von Menschen erfassbar sind, leben in diesen Orten; Tierherrscher, Halbgötter und legendäre Kreaturen, die kaum je ein Mensch zu Gesicht bekommen hat. Das unkontrollierte Wachstum und die Monster, welche den Stätten der Macht entspringen, führen dazu, dass der Wald auf Silva ein allesfressender Leviathan ist.
+	
+	%Umweltverschmutzung, Klimakatastrophe, Krieg und Gewalt
+	\paragraph{Katastrophe von Menschenhand} Verursacht durch die Kleingeistigkeit und Gewaltbereitschaft der Menschen, ereignete sich auf Silva eine ungeheure Katastrophe. Während des Grossen Krieges wurde ein Komet durch Manipulierung der Gesetze von Raum und Zeit zur Waffe umfunktioniert. Der Komet geriet aber ausser Kontrolle und vernichtete nicht nur ein ganzes Königreich sondern veränderte die bestehende kosmologische Ordnung. Manche Stätten der Macht wurden verschoben, andere neue geschaffen und einige gingen für immer verloren. Zu den Kreaturen der Sagen treten eine unbekannte Menge Chimären und mit dämonischem Material veränderte Kreaturen, die während des Grossen Krieges in den Wald geflohen sind und dort die Nahrungsketten über den Haufen geworfen haben. Ohne gute Organisation und angemessener Bewaffnung sind die meisten Menschen nur Beute. Das rasante Wachstum des Waldes muss mit gezielter Rodung in Schach gehalten werden.
+	
+	%Soziales Ungleichgewicht, Macht des Kapitals
+	\paragraph{Reichtum \& Armut}
+	In dieser mystischen Welt zementieren nicht nur der Besitz von Grund und Boden die Herrschaftsverhältnisse. Auch der Zugang zu magischen und thaumaturgischen Kräften ist ein Werkzeug der Macht, das von den Hierarchien überall auf Silva verwendet wird.
+	
+	
+	%Segen und Schrecken der Wissenschaft
+	\paragraph{Verrückte Forscher}
+	Abgesehen von der althergebrachten Forschung der Gilden und Adelshöfen wird in jüngster Zeit auch in den Gärten und Laboratorien der Alchemisten und in den Werkstätten der Arkantechnickern am wissenschaftlichen Fortschritt gearbeitet. Vieles ist instabil und gefährlich und verschwindet mit dem Entdecker bei dessen (selbstverschuldeten) Tod. Was jedoch übrig bleibt, wird das Geschick der Welt verändern. Von dampfbetriebenen Fahrzeugen und Werkmaschinen über furchteinflössend Waffen und Zaubersprüche, Haustiere und köstliche Früchte aus alchemistischer Zucht bis hin zu Flugschiffen und obskuren wissenschaftlichen Gerätschaften ist der Innovation keine Grenze gesetzt. All dies natürlich im Auftrag jener reichen Mäzenen, die sich die kostspieligen Laboratorien und Materialien leisten können.
+	
+	%Religiöse Konflikte, Ungewissheit des Glaubens
+	\paragraph{Wo bleibt Gott?}
+	Zwar sagen die Priester und Kirchen der grossen Imperien, dass es einen Gott gebe, der ihnen ihre Visionen und mystischen Kräfte schenkt, aber gesehen hat ihn noch niemand. Auch verehrt man in anderen Teilen der Welt einen anderen Gott (oder gar mehrere) und sogar heidnische Mystiker und Ketzer scheinen in seltenen Fällen die gleichen Wunder zu wirken, wie die Mönche und Templer.
+\end{multicols}
+
+ \section{Geographie}
+\begin{multicols}{2}
+	Die Welt ist nur unregelmässig erforscht. Wo auch immer sich viele Menschen niedergelassen haben, sind grössere Räume von Wissbegierigen untersucht worden, Flora und Fauna klassifiziert, magische Apparaturen, von denen niemald ausser einigen wenigen Arkanisten wusste, wozu sie dienten, wurden aufgestellt, weil sie hübsch surrten. Die gewonnenen Messdaten sind oftmals ungenau oder zu spärlich, um sich damit auseinander zu setzen. Weshalb sollte ein begabter Magier sich von den Schrecken der Wildnis umbringen lassen, wenn er stattdessen am Hofe eines Adeligen oder im Klerus einer verantwortungsvollen, gut bezahlten Anstellung nachkommen kann?
+	Nur verrückten Wissenschaftlern und Abenteurern sowie den Luftkapitänen ist es zu verdanken, das vereinzelte - meist falsche - grossräumige Karten und Enzyklopädien über unerforschte Gebiete entstanden sind.
+	
+	\subsubsection{Monarchien und deren Grenzen}
+	Niemand weiss wirklich, wie das Terrain unter dem undurchdringlichen Dach aus Blättern genau aussieht, deshalb werden die Grenzen einfach mit dem Lineal gezogen. Da niemand genau weiss, wo im Wald er sich befindet, sind Grenzverletzungen beliebte Vorwände für Kriegserklärungen.
+	
+	\paragraph{Mittelreiche}Die Mittelreiche (Crédune, Alber, Norge, Tiefwald, Tosco, Brescia) werden von absolutistischen Monarchen beherrscht, welche sich ihrerseits stets des Rückhalts der mächtigen Adelsräte und Familien versichern müssen. Die Provinzen Caergoch und Serebryani Bor, sowie die Kolonien Übersee sind Protektorate der Mittelreiche, und sind stark von deren Gesellschaftsstruktur geprägt.
+
+\end{multicols}
+\newpage
+\includegraphics[width=\textwidth]{b/Weltkarte.png}
+
+\newpage \section{Stätten der Macht}
+\begin{multicols}{2}
+	Überall auf Silva gibt es diese mysteriösen Orte unterschiedlichster Grösse, an denen sich Kräfte bündeln. Dort entstehen nun wahre Wunder, deren Auswirkungen auch noch mehrere Kilometer entfernt festzustellen sind. Orte der Macht werden von Menschen mit Steinkreisen, Tierschädeln und schriftlichen Warnungen gekennzeichnet. In der Lehre der Kirchen sind dies Orte, wo sich die verschiedenen Ebenen berühren.
+	
+\begin{table*}
+	\centering
+	\begin{tabular}{lll}
+			\textbf{Kraftquelle} & \textbf{Bewohner} & \textbf{Effekte und Zeichen} \\
+			\hline Waldherzen & Trolle & Ungehemmtes Wachstum \\ 
+			& Riesentiere und legendäre Monster & Steinkreise und Monolithen \\ 
+			& Tierherrscher & Riesenbäume \\ 
+			\hline Feentore & Grüner Mann oder Frau & Sphärische Klänge und Pilzringe \\ 
+			& Wilde Jagd & Tore zur Anderswelt \\ 
+			\hline Moderseuche & Aberrationen & Sumpf und Moder \\ 
+			& Riesenspinnen und -käfer & Krankheiten für Körper und Geist \\ 
+			& Untote &  \\ 
+			\hline Chaosspalten & Dämonen & Nähe zum Aether/Abyss \\ 
+			& Wesen aus purer Magie & Verzogene Raumzeit \\ 
+			&  & Mutationen \\ 
+			\hline Unterreich & Fremdartige Höhlenbewohner & Stalaktiten \\ 
+			& Tiefengnome & Riesenpilzwälder \\
+			&  & Leuchtende Moose \\
+	\end{tabular}	
+\end{table*}
+	
+	\paragraph{Waldherzen}
+	Die mit Abstand häufigsten Stätten der Macht, sind Waldherzen. Dort treffen sich urtümliche Kräfte der Natur. Manche davon sind friedliche Plätze, die Menschen ein gutes, wenn auch arbeitsames Leben ermöglichen. Aber wehe dem, der diese Idylle stört und beginnt masslos zu roden oder wildern. Dann erheben sich die Wächter dieser Orte, die sonst nur träge in der Sonne liegen und langsam mit Moos überwachsen werden.
+	Andere Waldherzen beherbergen wildes Fressen- und Gefressen-Werden. Gewaltige Tiere dominieren diese Orte, Räuber, denen Menschen nichts entgegenzusetzen haben.
+	
+	\paragraph{Feentore}
+	An diesen Orten ist das Feenreich besonders nah. Verändertes Licht und seltsame andersweltliche Geräusche sowie ein veränderter Zeitfluss deuten daraufhin. Bewohnt werden solche Orten von Elben und Feenwesen aller Art.
+	
+	\paragraph{Moderseuche}
+	Die Moderseuche, auch 'Die Fäule', ist eine Krankheit magischen Urspungs, die jedes Lebewesen befallen kann. Sie verwandelt blühende Landstriche in modrige Sümpfe oder Ödlande, wo jede noch so kleine Kreatur eine Krankheit mit sich trägt. Im schlimmsten Fall wird der befallene Ort von untoten Tieren, Menschen und Pflanzen heimgesucht. 
+	Nicht alle Wesen reagieren gleich empfindlich auf die Moderseuche. So zeigen zum Beispiel Schrate erhöhte Resistenz. Auch gedeihen in den Modersümpfen Riesenspinnen und -käfer sowie riesenwüchsige Aasfresser.
+	
+	\paragraph{Chaosspalten}
+	Durch Chaosspalten tropft die Energie des Aethers. Zeit und Raum verlaufen in verzogenen, verworrenen Bahnen. In Chaosspalten wohnen Dämonen und Elementargeister. Fauna und Flora sind wilden Mutationen unterworfen.
+	
+	\paragraph{Unterreich}
+	Unter der Oberfläche von Silva existieren gewaltige Hohlräume in denen es von seltsamem Leben tummelt. Pilzwälder und leuchtende Moose dominieren die Vegetation und tauchen alles in fahles Licht. Die Tiefengnome leben bevorzugt in diesen Gegenden und fördern die Schätze des Erdreichs.
+\end{multicols}
+
+\newpage \section{Zeitlinie von Silva}
+\begin{multicols}{2}
+	
+\subsubsection{Die Magierkriege}
+\begin{description}
+	\item[1189] Der Erzmagier Henricus von Albast erschafft in der Wüste Ademola eine gewaltige Schwarze Festung.
+	\item[1190] Der Versuch eines Zirkels von Erzmagiern und ihren Getreuen, Henricus von Albast und seine Festung zu vernichten, indem ein Komet von seiner Himmelsbahn abgelenkt und in die Ademola gestürzt wird, schlägt schrecklich fehl. Nicht nur sind mehrere der Zirkelmitglieder Verräter, sondern es gelingt Henricus auch dem Erzmagier Salam ibn Barad seinen Willen aufzuzwingen. Anstatt in die ademolische Wüste geht der Komet auf das Königreich Gardheim im Norden nieder. Der Einschlag führt zur totalen Annihilation der einstigen 'Perle des Norden' und hinterlässt nur eine dämonengeplagte Landschaft aus missgestalteten Sträuchern und erkalteter Schlacke, die heute Daemonia genannt wird. Der zur Beschwörung genutzte Turm und die gesamten anwesenden hundert Magier erstarren zu Glas. Der 'Scherbenturm' steht noch heute am Rande der Ademola, wo er allen Versuchen zu seiner Zerstörung widersteht.
+	\item[1217] Dank den neu entstandenen Orden der Heiligen gewinnen die Kräfte des Lichts langsam an Boden. Ihrer Aufassung nach sind die schon langem bekannten mystischen Kräfte einzelner Glaubensleute und weiser Menschen die vielfältigen Aspekte eines einzelnen Gottes. Die ultimative Feuertaufe durchlebt der neue Glaube als der falsche Heilige Nesfaro, einer von Henricus engsten Vertrauten und der mächtigste Dämonenbeschwörer in seinen Reihen in der 'Zweiten Dämonenschlacht' getötet wird.
+	\item[1218] Erst nach beinahe dreissig Jahren Krieg gelingt es Henricus in der ademolischen Wüste zu schlagen. Von den zweitausend Streitern - darunter viele Geweihte  - die in die Schlacht ziehen, kehrt nur eine Handvoll zurück.
+\end{description}
+	
+	\subsubsection{Restauration und Waldwachstum}
+	\begin{description}
+		\item[1218] Die folgenden Jahrhunderte erlebt die Welt einen gewaltigen Aufschwung. Neue Königreiche werden gegründet, der Glaube an den einen Gott verbreitet sich rasend schnell im gesamten Okzident und die Monstrositäten, die Orks und Oger werden in die Wälder zurückgetrieben. Zwar gibt es bewaffnete Konflikte, aber sie erreichen nie grösseres Ausmass, zu sehr sind alle mit dem Wiederaufbau beschäftigt.
+		\item[1305] Erster Befreiungszug nach Daemonia
+		\item[1355] Werasto von Damrott weist in einer vielbeachteten Schrift erstmals auf den durch den Kometen verursachten beschleunigten Waldwachstum hin. Seine Theorien werden jedoch von den meisten als Wichtigtuerei abgetan.
+		\item[1362] Der Gnomenkrieg
+		\item[1390] Niemand kann mehr leugnen, dass der Wald schneller wächst als früher. Beinahe aller fruchtbarer Boden ist mit Wald bedeckt und Ackerland muss zunehmend gerodet werden.
+		
+	\end{description}
+	
+	\subsubsection{Entdeckung der Kolonien und Schisma der Kirche}
+	\begin{description}
+		\item[1487] Die regionalen Kirchen von Tiefwald, Alber und Norge trennen sich als Kirche der Einheit Gottes von der Kirche der Heiligen indem sie den Pontifex aberkennen und ihr eigenes Bischofskonzil gründen. In allen Herren Ländern versuchen die Kirchen ihre Mitglieder zu disziplinieren. Diese Konflikte halten bis heute an.
+		\item[1492] Die Entdeckung der Neuen Welt auf der anderen Seite des Ozeanus Beluosus. Ein Wettrennen der grossen Mächte nach den Kolonien beginnt und verhindert ein unmittelbares Ausbrechen der schwelenden religiösen Konflikte, die sich trotzdem in einem Haufen Kleinkriege und Grenzkonflikte äussern, die bis heute andauern.
+	\end{description}
+	
+	\subsubsection{Jüngste Vergangenheit}
+	\begin{description}
+		\item[1578]
+		
+
+		
+		
+	\end{description}
+\end{multicols}
+\chapter{Bestiarium}
+
+% \section{Bestien}
+%\subsection{Squigs}
+%
+%\includegraphics[width=0.45\textwidth]{b/Squig.png}
+%\textit{„Wer auf ein Squig trifft, sollte auf folgenden dringlichen Rat hören: Töte das Squig! 
+%	Überlegungen wie - Es hat offensichtlich gerade gegessen, wahrscheinlich hat es keinen Hunger mehr – oder - Ein Tier mit so kurzen Beinen kann nicht sehr schnell sein- sind irreführend. Mein Begleiter in diesem Wald hat auf diese Art ein Bein verloren, und überlebte nur durch pures Glück.
+%	Ein Squig hat immer Hunger und ist sehr, sehr schnell!“}
+%
+%\begin{flushright}
+%	- Aus Grammas Enzyklopädie der Wesen
+%\end{flushright}
+%
+%\subsubsection{Erscheinung \& Verhalten}
+%Es gibt wohl kaum eine bekannte, natürliche Lebensform, die so effizient auf das Fressen ausgelegt ist wie der Squig. Sein kugelförmiger Körper besteht aus einem grossen Maul, Fortbewegungs- und Verdauungsorganen. Ganz offensichtlich hat die Natur beim Hirn gespart. Der Kamm ist dabei auf einer Höhe von bis zu 30 Centimeter.Einzeln kaum eine Bedrohung, stürzen sie sich in grossen Meuten auf die Gegner und beissen sie zu Tode. Der Kadaver wird innert kürzester Zeit bis auf die Knochen aufgefressen.
+%
+%Squigs gibt es in allen Variationen: Höhlen-, Horn-, Wald-, Sumpf-, Kanalisationssquigs. Ihre Klauen erlauben ihnen schnelle Bewegung auf jedem Untergrund. Man fand schon Squigs, die sich in vulkanischen Höhlen verbreiteten und solche, die Jagd auf kleinere anomale Wesen und Untote machten, obwohl sie an den Folgen des Konsums allmählich eingingen.
+%
+%Squigs sind gefrässige Bestien, die sich in fast jedem Flecken Wildnis der nördlichen Hemisphäre einen Platz in der Nahrungskette ergattert haben.
+%
+%\subsubsection{Kampfverhalten} Squigs werden sich sofort auf die kleinsten, am schlechtesten gerüsteten Gruppenmitglieder stürzen. Sobald sie sich in ein Ziel festgebissen haben, werden sie solange Stücke daraus reissen bis es stirbt. Squigs sind zu dumm zum Fliehen.
+%
+
+\section{Chimären}
+\begin{multicols}{2}
+	\includegraphics[width=0.40\textwidth]{b/Chimaere.png}
+	
+	Chimären sind mittels Magie oder Alchemie erschaffene Kreuzungen von verschiedenen Lebewesen. Diese unnatürlichen Geschöpfe wurden zu verschiedensten Zwecken geschaffen, oft als Kriegsbrut oder willige Diener. Um die Teile zusammenzufügen, wird oft auf dämonische Magie zurückgegriffen. Solche Chimären (auch Daimonide genannt) sind meist bösartig und schwer zu kontrollieren.
+	
+	Bekannte Chimären sind \textbf{Gnolle}, \textbf{Harpien}, \textbf{Mantikore} und \textbf{Zentauren}. Die königlichen Züchter aus Bois de Crédune sind bekannt für ihre flugfähigen Reittiere.
+	
+	\subsection{Gnolle}
+	\textit{"Hyänenmenschen, auch Gnolle genannt, sind Chimären aus Hyäne und Mensch, die in den Magierkriegen für den Krieg geschaffen wurden. Zur Menschenjagd. Ein sehr, sehr schnelles Pferd oder langsame Reisegefährten werden empfohlen. \\ (Eintrag in Gedenken an Adele und Erwin. R.I.P.)"}
+	\begin{flushright}
+		- Aus Grammas Enzyklopädie der Wesen
+		\end{flushright}
+		
+		\paragraph{Herkunft}
+		Die Hyänenmenschen, meist Gnolle genannt, sind ein Überbleibsel aus den Magierkriegen, als das Schaffen von Chimären als Kriegsgeräte und das Herumspielen mit Dämonen zwar verboten, aber trotzdem an der Tagesordnung waren.
+		Die genauen Umstände unter denen die Gnolle geschaffen wurde, sind unbekannt. Zweifellos wurde mit schwarzer Magie und Dämonenblut Experimente an  Menschen durchgeführt, um die gewünschte Aggressivität zu erzeugen, die die Gnolle zu gefährlichen Kriegern machen sollte.
+		Nach dem Tod Henricus' von Albast wurde versucht die Gnolle auszurotten. Man betrachtete sie als schreckliche Ausgeburten der Hölle. Wie  viele andere Kreaturen aus den Zeiten der Magierkriege zogen die Gnollrudel in die Wildnis und leben dort von der Jagd und gelegentlichen Plünderungen.
+		
+		\paragraph{Erscheinung \& Verhalten}
+		Gnolle sind gross und kräftig. Ihr Fell ist je nach Rudel gestreift oder getüpfelt. Sie leiden oftmals unter Räude und unter dem damit einhergehenden Juckreiz und Haarausfall. Narben und rituelle Piercings verleihen ihnen ein gefährliches Aussehen. Ihre langen Beine erlauben es ihnen, sich rasend schnell zu bewegen. Auf kurze Distanzen  halten sie sogar mit Pferden mit.
+		Gnolle sind Allesfresser. Sie fressen auch Aas. Sie leben und jagen in nomadischen Rudeln, die mit den Herden ihrer Beutetiere mitziehen. Hunde oder Hyänen werden dabei zum Bewachen der Zelte und zur Jagd eingesetzt.
+		Ein Gnollrudel hat einen Häuptling und einen Schamanen, der häufig magisch begabt ist und sich mit Heilkunde auskennt. Männer und Frauen sind gleichgestellt und übernehmen auch die gleichen Aufgaben. Die Grösse eines Rudels ist von der Grösse der Beuteherde abhängig.
+		
+		Während einige Stämme ihre Herkunft umarmen, und Jagd auf Kulturschaffende machen, sträuben sich andere gegen das Los das ihnen zuteil wurde. Diese Rudel versuchen, geleitet von einem Schamanen, ihren Blutdurst unter Kontrolle zu bekommen und keine intelligenten Wesen zu fressen.
+		
+		\paragraph{Kampfverhalten}
+		Gnolle jagen ihre Opfer und versuchen sie dann mit brutaler Gewalt zu töten, bevor sie effektive Gegenwehr leisten. Vorsichtige Gnolle weichen nach schnellen Attacken wieder zurück und ergreifen die Flucht, falls der Kampf sich wendet, hungrige Gnolle geraten nach einem schmerzhaften Treffer in Blutrausch und kämpfen bis zum Tod.
+		
+		\includegraphics[width=0.45\textwidth]{b/Gnoll.jpg}
+\end{multicols}
+
+\newpage \section{Dämonen}
+
+\begin{figure*}[htpb]
+	\centering
+	\includegraphics[width=.65\textwidth]{b/Daemonen.pdf}
+	\caption{D\ae monen}
+\end{figure*}
+
+\begin{multicols}{2}
+	
+	\paragraph{Erscheinung \& Verhalten}
+	Die höheren Dämonen sind mächtige Identitäten die in den tiefsten, chaotisten Stellen des Aethers ihren diabolischen Plänen nachgehen.
+	Weshalb die höheren Dämonen die niederen schaffen ist nicht bekannt. Vielleicht wurden sie selbst geschaffen (Für diese These mussten in der Geschichte der Kirche einige Priester auf den Scheiterhaufen). Fest steht, dass die vielgehörnten hohen Dämonen nicht perfekt sind und deshalb nicht in der Lage sind, echtes Leben zu erschaffen. Deshalb – so die Theorie von Henricus de Vivolâte – setzen sie ihren Geschöpfen einen Splitter pures Chaos, der sie zu einem falschen, verzerrten Dasein erweckt. Obwohl dies den Dämonen unglaubliche Macht verleihen kann, sind sie oft gar nicht dazu in der Lage, länger in der materiellen Welt zu existieren wenn sie nicht mit Zauberei hier gehalten werden. Ausserdem sind sie von allerunterschiedlichster Beschaffenheit: Grosse und kleine, weiche, halbflüssige, solche mit Schalen und Platten, Chitinpanzer, mit Hörnern, Zähnen und Klauen, explosiven Tumoren, vielen oder wenigen Gliedmassen, wuscheligem Fell, sowie einige wenige die völlig aus der Art geschlagen sind: Gutmütige, freundliche, kluge und lustige Dämonen von vegetarischem Ernährungsstil sind zwar theoretisch möglich aber extrem selten.
+\end{multicols}
+
+
+%\newpage \section{Die alten Rassen}
+%\begin{multicols}{2}
+%	\subsection{Die Anderen}
+%	\textit{Chrigu}
+%	
+%	\includegraphics[width=0.35 \textwidth]{b/anderer2.png}\\
+%	\textit{
+%		„ Die Anderen machten kein Geräusch. … Hoch ragte er vor ihm auf, hager und hart wie alte Knochen, mit Haut so weiß wie Milch. Seine Rüstung schien die Farbe zu verändern, wenn er sich bewegte. … . In seiner Hand hielt er ein Langschwert, wie Will es nie zuvor gesehen hatte. Kein den Menschen bekanntes Metall war zu dieser Klinge geschmiedet worden. Es lebte im Mondlicht, durchscheinend, eine kristallene Scherbe, so dünn, dass sie fast zu verschwinden schien, wenn man sie von der Seite sah. Ein schwacher, blauer Schimmer lag über dieser Waffe, gespenstisches Licht, das seinen Rand umspielte, und irgendwie wusste Will, dass es schärfer als jedes Barbiermesser war. … . Will sah seine Augen, dunkler und blauer, als Menschenaugen jemals sein konnten, ein Blau, das brannte wie Eis. … Der Andere sagte etwas in einer Sprache, die Will nicht kannte. Seine Stimme klang wie das Knacken von Eis auf einem winterlichen See, und die Worte waren voller Hohn. … Schwerter hoben sich und stießen herab, all das in tödlicher Stille. Es war ein kaltes Schlachten. … Seine feinen Kleider waren zerfetzt, das Gesicht eine Ruine. Eine Scherbe seines Schwertes steckte in der blinden, weißen Pupille seines linken Auges. Das rechte Auge stand offen. Die Pupille brannte blau. Sie sah.“
+%	} 
+%	\begin{flushright}
+%	- Aus G. R. R. Martins: Das Lied von Eis und Feuer 01 - Die Herren von Winterfell
+%	\end{flushright}
+%
+%	
+%	
+%	\subsubsection{Erscheinung \& Verhalten}
+%	Die Anderen, wie sie von der lokalen Bevölkerung furchtvoll genannt werden, sind grauenhafte Wesen des Nordens. Sie leben in eisiger Kälte und wenn sie sich entschliessen in Richtung Süden zu ziehen, zieht die Kälte mit ihnen. Es wird gemurmelt alle Anderen seien nichts weiter als Untertanen des Königs des Nordens; jener, den nie jemand lebendes zu Gesicht bekommen hat. Klar ist, dass sie eine gewisse Intelligenz besitzen. Dennoch ist es noch Keinem gelungen, zu erraten was in ihrem Kopf vorgeht. In Urzeiten haben die Menschen eine fürchterliche Schlacht geführt gegen die Anderen, welche sie beinahe verloren hatten. Es gelang ihnen jedoch die Wesen in den Norden zurückzudrängen und seither werden sie nur selten in Menschennähe geblickt. Wenn sie auch durch die Ruhe etwas abgeklungen ist, ist die Angst vor den Anderen bei der nordischen Bevölkerung doch immer noch präsent und nur wenige wagen die Reise in sehr kalte Gebiete.
+%	
+%
+%	
+%	\subsubsection{Eigenschaften}
+%	Fast alles Wissen über die Anderen stammt aus Urzeiten, aus den Kriegen und wurde mehr oder weniger schlecht überliefert:
+%	Gross und still, scheinen die Anderen im Kampf unermüdlich zu sein und kombiniert mit ihrer Resistenz gegen Kälte im Nahkampf sehr schwer zu bezwingen. Ein normales Schwert zersplittert beim Aufprall mit dem Schwert eines Anderen und nur erstklassige Waffen wie zum Beispiel ein Schwert, das mit Zauberkraft aus valyrischem Stahl geschmiedet wurde, können dagegen bestehen. Es wird gemunkelt, dass es sich um ein Feengeschlecht handeln könnte, denn die Anderen verfügen über magische Kräfte.
+%	
+%	Was die Anderen aber am gefährlichsten macht, ist ihre Fähigkeit, Menschen die sie getötet haben, als Untote des Nordens auf ihre Seite zu ziehen. Wer von einem Anderen niedergestreckt wird, steht nach kurzer Zeit wieder auf, seine Augen blau wie Eis, seine Hände schwarz und sein ganzer Körper kälter als der Tod. Diese Zombies sind schmerzunempfindlich und es gibt Berichte die bezeugen, dass selbst eine abgehackte Hand weiterlebt und sich noch bewegt.
+%	Die einzige bekannte Schwäche der Anderen, sowie ihrer Zombies, ist Feuer.
+%
+%\subsection{Feen}
+%
+%\end{multicols}
+\newpage \section{Feenwesen}
+\begin{multicols}{2}
+
+\subsection{Dryaden \& Nymphen}
+Diese Feengeister leben in Bäumen und kleinen Bächen, in Sträuchern und Teichen. Gewöhnlich sind sie nur für Schamanen zu entdecken und verstecken sich vor den meisten Menschen. Die Mehrheit der Nymphen und Dryaden besitzen kaum Intelligenz. Mit zunehmendem ALter entwickelt sich aber eine solche und auch die magischen Kräfte nehmen zu, so dass sich die Dryaden urzeitlicher Bäume durchaus mit den mächtigsten Elben messen können.
+Durch ihr Natur sind die meisten Dryaden einem Ort sehr verbunden und wurzeln tief in die Erde. Manche ziehen jedoch in einem hölzernen Körper durch die Wälder und pflegen kranke Sträucher und jagen Holzfäller.
+
+\subsection{Kobolde \& Elben}
+\textit{Angeblich soll der Kobold Ragawagapirzu dem Fürst von Neustein einen Wechselbalg untergeschoben. Das Kind wurde wieder zurückgewonnen, hatte aber einen absonderlichen Charakter entwickelt und wirkt schelmische Zauber. Er musste schliesslich enterbt werden.}
+\begin{flushright}
+	- Enzyclopedia magica
+\end{flushright}
+
+Alle mächtigen Feenwesen sind Meister der Illusion und können mühelos Gestalt wechseln. Sie erscheinen Menschen gerne in menschlicher Gestalt, aber das sollte nicht darüber hinwegtäuschen, dass sie grundverschieden sind und wenig Geduld oder Verständnis für menschliche Konzepte von Moral haben. Ob sich Elben (auch Alben, Elfen) in Rassen einteilen lassen, wie alt sie werden: Dies ist alles nicht mit Sicherheit bekannt. Die besten Quellen sind auf diesem Gebiet immer noch die Volksmärchen, Legenden und die Sagas der alten Religionen.
+
+\paragraph{Wilde Jagd} Ein in vielen Märchen wiederkehrendes Thema sind die Reiter der Wilden Jagd, einem Zug von Elfen, der über den Nachthimmel reitet und Menschen - je nach Legende - entführt, tötet oder  sie in Hunde verwandelt. In den älteren druidischen Religionen, die in Caergoch und grossen Teilen Norges gelebt werden und auch im völkischen Aberglauben überlebt haben, ist die Wilde Jagd auch als Wüetisheer, das Heer des Gottes Wüeti bekannt.
+	
+	
+%\subsection{Irrlichter}
+
+
+\end{multicols}
+
+
+\newpage \section{Gnome}
+\begin{multicols}{2}
+\includegraphics[width=0.40\textwidth]{b/gnom_fechter.jpg}
+\paragraph{Erscheinung \& Verhalten}	
+Erwachsene Gnome sind selten über 1,40 Meter gross (oft sogar deutlich kleiner)und haben grosse abstehende Ohren und grosse Augen. \textbf{Hügelgnome} leben in Städten oder in den namensgebenden Hügeln, in die sie ihre Höhlen bauen. \textbf{Tiefengnome}, auch Graugnome oder Svirfnebli genannt, leben im Unterreich, wo sie Tunnel bauen und Städte in Kavernen bauen. Gnome können beliebig alt werden, wenn sie nicht eines gewaltsamen Todes sterben. Die ältesten Gnome sind über tausend Jahre alt.
+
+Ein Gnom versteht das eigene Bewusstsein als Vielzahl von Stimmen im Kopf, die ständig miteinander diskutieren, streiten oder auch feiern und philosophieren. Diese Stimmen werden in der gnomischen Kultur Nebli genannt, was soviel wie „kleine Männer“ heisst.
+Ein Gnom handelt immer, wie es ihm die Nebli eingeben, sehr spontan und manchmal ohne sichtbar von aussen motiviert zu sein. Diese Handlungen sind im besten Fall einfallsreich, originell und trickreich, im schlechtesten Fall irrational, ziellos und fahrlässig. Sicher aber wird der Gnom beteuern, er hätte nicht anders gekonnt; Was-wäre-wenn Überlegungen sind für einen Gnomen absurd. Ist sich ein Gnom unsicher, wie er sich entscheiden soll, versucht er zusätzliche Kleine Männer an Bord zu holen, denn gewiss werden sich die klügeren Nebli gegen die anderen durchsetzen.  Zu diesem Zweck werden Freunde um Rat gefragt, oder – was sehr beliebt ist – man lässt sich von einem Barden eine Geschichte erzählen. Das ist der Grund warum Barden einen so hohen Stellenwert in der gnomischen Kultur geniessen: Sie fungieren nicht nur als Unterhalter sondern auch als Lehrer und Ratgeber.
+
+	
+\paragraph{Kultur}
+Die meisten Gnome entwickeln im Laufe ihres Lebens irgendeine Obsession oder ein Flair für etwas. Während sich der eine für Maschinen interessiert (und das tun viele), könnte sich ein anderer sich ausschliesslich mit dem herstellen und Verkaufe von zu Trinkgläsern zusammengeklebten Glassplittern beschäftigen. Dabei ist der Gnom nie gegen eine absolute Gesinnungsänderung gefeit. Der Techniker könnte beispielsweise sein Interesse an blinkenden Maschinen komplett aufgeben, und stattdessen versuchen, einen Garten zu pflanzen, bei dem alle Bäume auf Brusthöhe im $45^{\circ}$ Winkel in eine bestimmte Richtung ragen. Diese Hingabe und die Erfahrung, die über ein langes Gnomenleben gewonnen werden kann,  führt zu handwerklichen Meisterleistungen. Uhren, Armbrüste und Schiesspulverwaffen aus Gnomenproduktion sind sehr gefragt und die  Hochöfen von Zetara, die Juuran-Schmelzerei und die Manufaktur der Familie Rübensaft sind echte Marken.
+	
+%Ein Gnom interessiert sich aber nicht für Etwas, er findet den Kwart in diesem Etwas! Ein Kwart ist viel stärker als ein Interesse. Es ist Teil des Gnoms und wenn es weitergeht von einem Handwerk zu einem anderen, muss der Gnom ihm zwangsläufig folgen. Gewisse Kwarts bleiben ein ganzes Leben lang an einem Ort und der Gnom erreicht so oft nahezu Perfektion in diesem Gebiet. 
+%Kwarts müssen gefunden werden. Einige Gnome suchen ihr ganzes Leben lang nach ihrem Kwart ohne es zu finden – andere hingegen finden sogar mehrere zur gleichen Zeit.
+		
+%Es ist ein grosser Irrtum zu glauben alle Gnome fänden ihr Kwart in Maschinen oder einem Handwerk. Viele finden es in ihrem Wohnhaus oder einer Gnomin (und auch da kann das Kwart urplötzlich und spontan Platz wechseln). Dies ist mit ein Grund weshalb viele Gnome in Gnomenstädten ansässig sind und sich fortpflanzen. Es sei hier angemerkt, dass ebenso viele Gnome einfach in einem Haus leben, da dies notwendig ist für ihr Handwerk (diese Art von Häuser ist normalerweise sehr viel chaotischer als die von Gnomen welche ihren Kwart in ihrem Haus finden). 
+	
+\paragraph{Religion}
+Gnome beten nicht zu Göttern. Nicht etwa, weil sie nicht an sie glauben würden, die Gnome haben ein riesiges Pantheon, dessen Mitglieder sich durch eine enorme Vielzahl an Namen und Marotten auszeichnen.  Vielmehr möchte man sich die göttichen Gefallen für jene einzige Gelegenheit aufsparen, indem man sie wirklich nötig hat: für den Krieg. Und ausserdem möchte man die Götter nicht verärgern, indem man sie mit Nichtigkeiten davon ab hält, ihren Nebli zu folgen. Die wenigen Gnome, die ihr Leben den Göttern widmen,  werden von den anderen Gnomen Beblith genannt: „Gottesstimme“.  Einen Beblith um Rat zu fragen oder sich für einen ungefragt erhaltenen Rat zu bedanken gilt als Beleidigung der Götter.
+	
+\paragraph{Gnomenälteste}
+Mit zunehmendem Alter interessieren sich die meisten Gnome immer weniger für das Tagesgeschehen, sondern widmen sich mit immer grösserer Rigorosität der Erforschung ihres Kwarts. Die Ältesten sind Wesenheiten, die mit einem Gnom in seinem ersten Lebensjahrhundert kaum mehr etwas gemeinsam haben. Um die Taten ihrer Jugend ranken sich unzählige Legenden und ihre magischen Kräfte können sich durchaus mit denen der grössten Feenherrscher messen.
+	
+Der allerälteste Gnom heisst \textbf{Durit Steinohr} und zeigt sich kaum mehr in der Welt der Menschen und jüngeren Gnome. Es heisst, er sitze die meiste Zeit nur in einer Felsgrotte tief unter der Erde und höre den Steinen beim Wachsen zu. Man munkelt, Durit Steinohrs Urgrossvater sei einer der ersten Gnome gewesen, die von den Göttern aus Lehm und Kohle geformt wurden.
+	
+\textbf{Draupnir} ist der grösste Schmied, den die Welt je gesehen hat. Viele seiner Artefakte sind über die Jahrhunderte in alle Winde zerstreut worden. Die Krone Norges, das Schwert Stahlherz und "die Kette, die den Mond fesselt" sind einige Gegenstände in Menschenhand, die sorgfältig gehütet werden.
+	
+Von diesen ältesten Gnomen ist einzig \textbf{Snorri Skaldur} an Politik und dem Geschick der Jüngeren interessiert. Er ist sowohl Menschen- wie auch Gnomenherrschern als Ratgeber zur Seite gestanden und hat den Aufstieg und Fall von Königreichen beeinflusst. Seine Kunstfertigkeit als Barde sei so gross, dass er am Hofe einer Feenprinzessin alle Mitbewerber ausgestochen hätte und ihr Herz nun für alle Ewigkeit besitze. 
+	
+\paragraph{Zeitrechnung}
+Die Uhrenmanufaktur ist weit verbreitet unter den Gnomen. Und Teil dieses Handwerks ist die Zeitrechnung. So kommt es dass jede Gnomenstadt ihre genaue Zeit hat – nur dass diese von Stadt zu Stadt verschoben oder gar gänzlich anders berechnet ist (was sich im Fahrplan des Steambusses bemerkbar macht).
+	
+	\includegraphics[width=0.35\textwidth]{b/Svirfneblin.jpg}
+	
+	
+\end{multicols}
+
+\newpage \section{Riesenartige}
+\begin{multicols}{2}
+	\subsection{Oger}
+	\includegraphics[width=0.45\textwidth]{b/Oger.jpg}
+	\textit{Oger (Homo Colossiaeus Carnivorus) essen alles. Besonders gerne Menschen. Damit ist das Verhältnis zwischen Menschen und Ogern restlos geklärt.}
+	\begin{flushright}
+		- Aus Grammas Enzyklopädie der Wesen
+	\end{flushright}
+	
+	\paragraph{Erscheinung \& Verhalten}
+	Oger sind zwischen 2,60 – 2,80 Schritt gross und mindestens 180 Kilo schwer. Meistens sind sie sogar dick und bringen dann problemlos über 250 Kilo auf die Waage. Sie benutzen einfache Werkzeuge und verstehen sich auf das Holzhandwerk, die Feuersteinbearbeitung und die Gerberei, für die sie üblicherweise ihren eigenen Urin benutzen.
+	Oger verfügen über eine einfache Sprache, die Entlehnungen aus der jeweiligen regionalen Menschensprache besitzt. Waffen und Rüstungen aus Metall besitzen sie selten, da sie selbst nicht schmieden können und die benötigten Mengen Metall erheblich sind.
+	
+	\paragraph{Mutationen}
+	Bis heute ist den Gelehrten nicht bekannt, warum Oger in besonderem Masse anfällig sind für Mutationen. Hörner oder Hauer sind keine Ausnahme und vereinzelt trifft man auf Oger, die einen zusätzlichen Arm oder zwei Köpfe haben. Auch ihr Verstand scheint sehr unterschiedlich ausgeprägt zu sein. Während einige kaum sprechen können, sind andere so klug wie Menschen und jagen mit List und Tücke.
+	
+	Im Bois Crédunois wurde ein vierarmiger Oger getötet, nachdem er wiederholt Händlerkarawanen überfallen hat, indem er den vordersten Wagen umkippte. Und im Guldholz in Tiefwald ist ein Oger gesichtet worden, der drei Köpfe besitze und laute Debatten mit sich selbst führe. Dabei scheint es sich um ein besonders intelligentes Exemplar zu handeln, denn er hat sich schon zweimal erfolgreich dem Zugriff der königlichen Waldläufer entzogen.
+	
+	\paragraph{Kampfverhalten}
+	Bedingt durch ihre immensen Körperkräfte, ihre Masse und Schmerzunempfindlichkeit sind Oger sehr gefährliche Gegner. Oft benutzen sie einfache Keulen, doch auch mit ihren Fäusten können sie verheerend zuschlagen. Besonders in der Zeit vor den Magierkriegen war es auch üblich, Oger abzurichten und als Soldaten einzusetzen. Solche Kampfmaschinen waren in der Lage ganze  Soldatenzüge zu töten. Oger sind stets mutig und kampflustig, denn sie sind so dumm, dass sie selbst dann nicht fliehen, wenn sie einen Kampf schon sicher verloren haben.
+	
+\end{multicols}
+
+\newpage
+\section{Scheusale von der anderen Seite}
+\begin{multicols}{2}
+
+
+	In der kalten, chaotischen Einöde ausserhalb der Realität, abgetrennt von Wirklichkeit und Leben, existieren unbeschreibliche Schrecken, die nichts mehr wünschen als Einlass in unsere Welt, ein Platz am Lagerfeuer, das Leben ist. Ob nun bösartig oder schlicht von Wahnsinn gepeinigt, entstellen und verderben diese Schrecken alles womit sie in Berührung kommen. Sollte es einer Aberration gelingen an einer brüchigen Stelle im Weltengefüge einzudringen, wird sie zweifellos eine grässliche unstete Form annehmen, ganze Städte werden dem Wahnsinn verfallen und Untote werden in einer furchtbaren Verballhornung echten Lebens über die Erde wandeln.
+\end{multicols}
+
+\section{Schrate}
+%SCHRATRASSEN
+
+\begin{multicols}{2}
+	\paragraph{Erscheinung \& Verhalten}
+	Schrate sind intelligente, kulturschaffende Zweibeiner mit einem dichten Fell und gewaltigen Ohren. Sie sind mit durchschnittlich 1,45 Metern etwas grösser als Gnome, jedoch eher von schmaler, drahtiger Statur. Bevorzugte Siedlungsgebiete sind Sümpfe und Moore weitab von den Städten der Menschen, die Schrate als mindere Rasse betrachten und ihnen eine Seele absprechen. Sie zeichen sich durch eine extreme Resistenz gegen die Moderseuche aus, die alles Leben korrumpiert und sich an manchen Orten wie ein Tumor ausbreitet. Auch aus diesem Grund gelten Schrate bei den Menschen als schmutzig, verseucht, minderwertig, seelenlos, von Dämonen besessen und werden beschuldigt Kinder zu fressen.
+	
+	
+	
+	\paragraph{Kultur}
+	Schrate leben stammweise in Siedlungen  aus Erdhöhlen und Baumhäusern zusammen, die meist kaum zu entdecken sind, wenn sie nicht eine Palisade besitzen. Über ihre religiösen Ansichten ist kaum etwas bekannt, nur dass Schamanen einen wichtigen Platz in der Gesellschaft einnehmen und mit Tieren und Geistern kommunizieren.
+Schrate haben eine komplexe Bilderschrift und verwenden wie die Menschen die Gnomenzahlen für Berechnungen. Ihre Schmiedekunst ist rudimentär, aber ihre Kenntnisse über Medizin, Kräuter und das Abrichten und Züchten von Nutztieren lassen jeden menschlichen Gelehrten vor Neid erblassen. Anstelle von Metallen werden eher natürliche Materialien wie Horn, Sehnen und Knochen verschiedenster Bestien genutzt.
+
+%\includegraphics[width=0.45\textwidth]{b/Schrat.jpg}
+\end{multicols}
+
+\newpage \section{Trolle} 
+\begin{multicols}{2}
+Trolle sind gewaltige Wesen aus Stein. Oft liegen sie bewegungslos im Wald und sind von einem moosbewachsenen Stein kaum zu unterscheiden. Ihre unsymmetrischen Körper können jede Form von Fels wie Vulkangestein, Sediment, Sand, Lehm oder sogar Magma haben. Erst wenn sie ihre obsidianschwarzen Augen aufschlagen, oder sich an einen anderen Ruheplatz begeben, werden sie entdeckt und lösen dann oftmals Panik aus. Meistens jedoch nicht, denn es ist sehr unwahrscheinlich, dass sich in Troll weiter als etwa zwei Meter pro Tag bewegt. Es ist kaum etwas über sie bekannt: Man weiss weder was sie essen und trinken, noch ob sie überhaupt über Intelligenz verfügen. Man vermutet, dass  sie immerzu wachsen, denn einige Exemplare sind so gross wie Häuser oder gar Hügel. Es gibt Hügeltrolle, die unter der Erde lebenden Höhlentrolle, Waldtrolle sowie Berg- bzw. Steintrolle, die sich besonders von Steinen und steinernen Bauten wie zum Beispiel Brücken angezogen fühlen.
+	Ob diese Unterscheidungen tatsächlich verschiedenen Trollrassen entsprechen, oder ob sie einfach zufällige Beobachtungen sind, lässt sich nicht sagen, wobei die meisten Gelehrten dafür plädieren, dass man bei Trollen nicht von Lebewesen und deshalb auch nicht von Rassen sprechen dürfe.
+	Die einzigen, die allenfalls mehr über die wahren Begebenheiten wissen könnten, sind die Druiden, die ihr Wissen aber unter keinen Umständen preisgeben.
+
+%\begin{table*}
+%\includegraphics[width=\textwidth]{b/troll.jpg}
+%\end{table*}
+\end{multicols}
+
+%\newpage \section{Untote}
+%UNTOTE
+%
+%\newpage \section{Werwesen}
+%WERWESEN
+
+\newpage \section{Wichte}
+\begin{multicols}{2}
+Wichte, manchmal auch Wichtel genannt, sind kleine humanoide Geschöpfe. Sie leben wild in allen Regionen der Welt. Obwohl selbst harmlos, können sie sich mit verschiedensten magischen Tricks vor Fressfeinden schützen. Aufgrund ihrer neugieriger Natur zieht es sie manchmal zu dörflichen Siedlungen, wo sie die Menschen beobachten, ihnen Streiche spielen, oder manchmal auch helfen, insbesondere, wenn man sie mit Süssigkeiten besticht. Sie sind sehr scheu und lassen sie sich kaum blicken, ausser von Kindern.
+	
+\paragraph{Erscheinung \& Verhalten}
+Ein typischer Wicht wird bis zu 2 Handbreiten gross und etwa zwei Kilogramm schwer, wobei Grösse und Gewicht innerhalb einer Population stark varieren können.
+	
+	Alle Wichte reden Wichtel, eine Sprache die so schnell ist, das sie für Menschen kaum verständlich und ohne Magie unmöglich zu sprechen ist.
+	
+	
+	\subsection{Fürchtewicht}
+	Der Fürchtewicht (Pumilus Pavidus) ist ein kleiner Geselle aus der Familie der Wildwichte. Charakteristisch sind lange, dünne Gliedmassen, einen grossen Kopf, der von zwei riesigen Ohren dominiert wird. Die Behaarung ist eher spärlich, wenn man vom Haupthaar absieht, dass beim Pumilus Pavidus dicht und typischerweise strubbelig ist. Erst im Winter oder in frostigen Gebieten wächst ihnen ein dichter Pelz, wobei jedoch nicht geklärt ist, ob es sich dabei nicht um zwei verschiedene Species handelt.
+	Fürchtewichte reden ausschliesslich Wichtel. Ob sie menschliche Sprachen erlernen können, ist nicht bekannt. Überhaupt leiden alle Studien über den Pumilus Pavidus unter der Tatsache, dass sie selbst unter Aufbietung magischer Mittel kaum zu fangen sind.
+	
+	Grundstein der Überlebensstrategie des Fürchtewichts ist seine Schreckhaftigkeit. Wird der Pumilus Pavidus einer Bedrohung gewahr, beginnt er mit einem lautstarken Gezeter und Geschrei. Er steigert sich immer mehr in sein hysterisches Gebaren, dass neben wildem Kreischen auch schnelles Herumhopsen einschliesst, bis er plötzlich verschwindet, d.h. unsichtbar wird.
+	
+	\subsection{Nachtschwärmer}
+	Nachtschwärmer sind kleine schmächtige Wesen mit riesigen Ohren. Ihr Hörvermögen ist so gut, dass sie sogar Gedanken zu hören vermögen.
+	
+	\subsection{Pustelwicht}
+	Diese hässlichen Kameraden sind über und über mit Pusteln, Eiterblasen und Warzen bedeckt. Im Gegensatz zu anderen Wichten geniessen Pustelwichte Aufmerksamkeit: Sie neigen zu theatralischen Tobsuchtsanfällen oder stolzieren auf und ab. Viele Tiere lassen sich davon verjagen. Wenn nicht, spucken sie säurehaltige Hexengalle auf den Gegner und fliehen dann in grossen Sprüngen ausser Reichweite, von wo aus sie den Gegner weiter verhöhnen.
+	
+	Ihr Auftreten sollte aber nicht darüber hinwegtäuschen, dass Pustelwichte besonders liebevolle Hausgeister sind.
+\end{multicols}
+%==================================================================================================
+
+\chapter{Magie}
+\begin{multicols}{2}
+Mithilfe von Zaubern, mystischen Kräften und der Willenskraft lässt sich das Gefüge der Realiät direkt verändern. Diese Kräfte werden Magie genannt. Das Verändern des Weltgefüges verleiht grosse Macht, ist aber sehr gefährlich für Geist und Körper des Anwenders. Unsachgemässe Anwendung führt zu Beschädigung der Psyche, spontanes Beschwören von Dämonen, der Umkehrung des erwünschten Effekts oder der Manifestation des gewünschten Effekts zur falschen Zeit am falschen Ort. Dabei ist die Gefahr umso grösser, je grösser die versuchte Änderung ist.
+
+Das Anwenden von Zauberei ist deshalb vor allem Wissen, wie man mit dem kleinstmöglichen Einsatz von Magie den grösstmöglichen Effekt bewirken kann. Schutzkreise, magische Gesten, seltene Substanzen und günstige astronomische Zeichen werden benutzt um die Effekte auf das Wohlergehen des Zaubernden und seine Umgebung gering zu halten. Mönche und Inquisitoren benutzen dazu rituelle Gebete. Auch schiere Willenskraft oder tiefer Glaube kann verwendet werden um die Realität zusammenzuhalten.
+
+Den Riegel einer Tür zu verschieben oder das Bewegen eines kleinen Gegenstandes, sollte einen geübten Zauberer kaum fordern. Das Auslöschen einer ganzen Stadt mit einem Feuerregen, setzt einen gesamten Zaubererzirkel der Gefahr aus, von Dämonen verschlungen zu werden und kann furchtbar schief gehen.
+\end{multicols}
+
+
+\newpage \section{Gefahren der Magie}
+\begin{multicols}{2}
+\subsection{Mangelnde Kontrolle}
+\textit{Schweiss lief in Bächen über Anselms Stirn. Sein Gegner hatte ihn mit Edrich Kleiner Flammen-Incantatio überrascht und nun hing ein Flammenball drohend in der Luft. Angelockt von der Hitze trieb sich ein kleiner Flammengeist am Rande von Anselms Gesichtsfeld herum. Während Anselm gleichzeitig versuchte den Zauber auszulöschen und seinen Gegner mit einem Blitz ausser Gefecht zu setzen, brannte ihm der Elementar die Augenbrauen weg. Solchermassen ausser Fassung gebracht, gelang es ihm nicht mehr den Feuerball unter Kontrolle zu halten. Anselm griff tief in das Gewebe der Welt und schlug das Feuer mit einem Schild aus purer Energie von sich weg. Das hätte er nicht tun sollen. Unfähig, die beschworene Energie zu beherrschen, entlud diese sich in den Raum. Funken aus Feuer und Elektrizität flogen für einen kurzen Moment durch den Raum, bevor Anselm und sein Gegner völlig die Kontrolle verloren und das ganze Gebäude in einem gleissenden Blitz explodierte.
+}
+
+Bei jedem gewirktem Zauber besteht die Chance auf einen Fehlschlag. Wer etwas in Brand setzen möchte, kann das Falsche in Brand setzen. Anstatt die Herrschaft über einen beschworenen Dämonen zu erlangen, unterwirft der Dämon den Beschwörer. Auch können mehrere gewirkte Zauber unvorhergesehen miteinander interagieren.
+Besonders wenn zwei Zauberer sich duellieren und unter Druck versuchen grössere Kräfte zu beherrschen als ihnen möglich ist, kann die Situation eskalieren.
+
+\subsection{Die Fäule}
+Die Fäule ist ein Sammelbegriff für eine Vielzahl von magischen Krankheiten und Flüchen, die sich seit den Katastrophen der Magierkriege in Silva eingenistet haben. Diese Seuchen korrumpieren alles lebendige, manche beschränken sich auf eine bestimmte Spezies, andere befallen Pflanzen, Tiere und Menschen gleichermassen. Da ihre Ursprünge magischer Natur sind, sind die Krankheiten der Fäule auf profane Weise nicht zu heilen und durch ihre scheinbar erratische Wirkungsweise entziehen sie sich den Studien der Gelehrten. Vielen dieser Krankheiten sind solche Symptome gemein:
+\begin{itemize}
+	\item Untod
+	\item Wahnsinn
+	\item Blutdurst und der unersättliche Hunger nach Fleisch und Lebendem
+	\item Verführende Düfte und den Verstand beeinflussende Zauber
+	\item Körperliche Mutationen
+	\item Empfindlichkeit gegen (Sonnen- oder Mond-)Licht
+\end{itemize}
+
+
+
+Einige der bekannteren Krankheiten seien hier beispielhaft beschrieben.
+
+\paragraph{Moderseuche}
+Synonym für die Fäule ist die Moderseuche. Die Moderseuche befällt alles Lebendige und lässt alles Gewebe langsam absterben und verrotten. Manche Tiere und Pflanzen blühen unter dem Einfluss der Moderseuche erst richtig auf. Übergrosse Spinnen und Ratten suchen die Wälder heim, die sich langsam in einen Sumpf aus abgestorbener Pflanzenmasse verwandeln. Die Äste von Eichen verwandeln sich in dornenbewehrte Fangarme die ein Loch mit messerscharfen Zähnen mit Nahrung versorgen. In einem von der Moderseuche verdorbenen Landstrich können bereits kleine Schnitte oder Schürfungen und besonders Spuren von Krallen oder Bissen durch bereits erkrankte Wesen schnell eitern und sich entzünden. Stehen keine magischen Mittel bereit, kann nur die Amputation ganzer Gliedmassen und Versengen des Stumpfes verhindern, dass der Erkrankte stirbt und als als geistloser Untoter wieder erwacht.
+
+\paragraph{Vampirismus}
+Gemäss verbreiteten Lehren, werden Menschen zu Vampiren, weil sie ein besonders gotteslästerliches Leben geführt haben oder verflucht wurden. Im ersten Moment erscheint Vampirismus als Segen: Vampire erhalten die Macht, sich ihre Opfer mit verführenden Zaubern ihrem Willen zu unterwerfen und verfügen über übermenschlich starke Körper, die mit Waffengewalt kaum zu zerstören sind.
+
+Zu untotem Scheinleben erweckt, sind diese Geschöpfe jedoch dazu verdammt, ihrem Durst nach dem Blut der Lebenden nachzugeben, um die Erscheinung als gesunder Mensch aufrechtzuerhalten und die körperlichen und seelischen Qualen zu lindern, die eine solche Existenz mit sich bringt. Während gewöhnliche Speisen über die Zeit den Hunger weniger und weniger stillen, wird der Hunger nach gestohlener Lebenskraft immer grösser und die untote Natur des Vampirs tritt immer offensichtlicher zu Tage. Gleichzeitig verliert der Vampir unweigerlich den Verstand.
+
+\quad
+
+\textit{„Eyn fahrender Vampyrtöter hat mir erzählt, der Schlüssel zum Besiegen eynes Vampyrs liege im Ausnutzen seynes gestörten Geistes. Wenn man einem Vampyr Erbsen entgegen werfe, so könne er sich nicht des zwanges erwehren, sie sofort alle zu zählen. Auch könne man ihn leicht zwingen, nach eynem  persönlichen Gegenstand zu suchen, dem in seinem vorhergehenden Menschenleben grosse Bedeutung zukam: Das Porträt oder der Liebesbrief eyner Geliebten, die Urne des Vaters oder der Sarg in dem er beerdigt wurde.
+Auch verrät sich der Vampyr durch seyn absonderliches Verhalten: Er spricht mit stimmen in seynem Kopf oder unterliegt einer krankhaften eitelkeit, weshalb er sich widerlich übertrieben parfümiert und seine Hende wider und wider wäscht, bis sie ganz wund sind.“}
+\begin{flushright}
+	- Bericht von Bruder Klaus, gefunden im Kloster zu Brijsca
+\end{flushright}
+
+
+\paragraph{Lykanthropie}
+Lykanthropen, im Volksmund auch Werwölfe genannt, leben ein weitgehend normales Leben als gewöhnlicher Mensch. Sie werden jedoch in wenigen Nächten von ihrer Krankheit heimgesucht. Während einer solchen Episode spriessen ihnen Haare aus dem ganzen Körper, sie wachsen zu gewaltiger Grösse und riesige Muskeln bewegen sich unter ihrem frischen Fell, während der Kopf tierische Züge annimmt. Es überfällt sie ein unbändigen Hunger auf Fleisch. Am nächsten Tag haben sie oft keine Erinnerung, die gerissene Schafe und schwer verletzte Kühe erklären können.
+
+\end{multicols}
+\newpage \section{Alchemie}
+\begin{multicols}{2}
+
+	
+	\subsection*{Alchemische Materialien}
+	Alchemische Materialien sind immer bereits speziell behandelt worden, und sei es nur, dass Metalle unter bestimmten Sternenkonstellationen aus den Erzen gewonnen wurde. Die Geheimnisse zur Herstellung alchemischer Stoffe werden eifersüchtig gehütet und der Zugang zu entsprechenden Zirkeln stark beschränkt. Meist gibt es mehr als eine Formel, die zu einem ähnlichen Resultat führt. Anleitungen sind oft ritualisiert und enthalten viele unnötig Schritte, die aber schon lange überliefert sind. Erst seit etwa fünf Dekaden sind systmatische Forschungen auf dem Gebiet nicht mehr exotisch.
+	
+	\subsubsection{Beispiele alchemischer Stoffe}
+	\textbf{Adamantium} ist ein unglaublich hartes und gleichzeitig leichtes Metall von matter, dunkelgrauer Farbe. Es entsteht in den Hochöfen königlicher Schmieden und gnomischen Tiefenschmieden unter strengster Geheimhaltung der erforderlichen alchemistischen Vorgänge.
+	Unwissende spekulieren über Vulkanasche und Mondphasen, reinstes Silber und Meteoreisen. Rüstungen aus Adamantium sind nur für den Hochadel und die obersten Ränge des Klerus erhältlich und mit der Summe, die gezahlt wird, sollte eine Rüstung einmal verkauft werden, würden sich andere einen Palast bauen. Aus Adamantium werden ausschliesslich Plattenrüstungen und Kürasse hergestellt.
+	Trotz allen Gerüchten ist Adamantium kein magisches Metall. Adamantium verträgt sich schlecht mit magischer Begabung.
+	
+	\textbf{Meteoriteisen und -gestein:} Oftmals weisen die seltenen Erden in Meteoriten besondere alchemische Eigenschaften auf. Der Fund eines Meteoriten wird grosszügig belohnt.
+	
+	\textbf{Dämonische Stoffe:} Unter dem verderbten Einfluss von dämonischen Energien oder der Fäule entstehen so wunderliche Legierungen und Stoffe wie Krakensilber, Hölleneisen, Narrenglas, Knochenblei und Geisterblech.
+	
+	\subsubsection{Metalle und Magie}
+	Metalle weisen eine grosse Palette an verschiedenen Wechselwirkungen mit Magie auf. Das überlieferte Wissen zu gewöhnlichen Metallen und Edelmetallen ist ziemlich umfangreich und gut dokumentiert.
+	
+	\textbf{Blei} ist für magisch begabte Wesen besonders unvorteilhaft. Es lässt sich kaum verzaubern, blockt magische Strömungen ab und erschwert das Wirken von Zaubern, wenn es in der Nähe ist. Eine Bleivergiftung kann zum dauerhaften Verlust magischer Kräfte führen. 
+	
+	\textbf{Silber} wirkt verletzend gegen Werwölfe und körperlose Geister, sowie andere magische Gschöpfe, die mit der Naccht assoziert werden. Es wirkt magiebannend und Artefakte, die antimagischen Zwecken dienen, haben häufig Silberanteile.
+	
+	\textbf{Quecksilber} leitet die Ströme und Schwingungen des Aethers. Es ist deshalb Bestandteil vieler Messgeräte, die von Astronomen, Magiern und Arkantechnikern gebraucht werden.
+	
+\end{multicols}
+
+%\newpage \section{Instrumente \& Waffen}
+%
+%\begin{multicols}{2}
+%	\subsection*{Schiesspulverwaffen}
+%	Schiesspulverwaffen benutzen Schiesspulver oder potentere alchimistische Substanzen, um Kugeln zu verschiessen. Gewöhnlich Auslöser sind Lunten- oder teurere Radschlösser. Zwar verursachen Schwarzpulverwaffen verheerenden Schaden, allerdings sind auch gefährlich und schwer zu bedienen. Bei ungenügender Wartung und Vorsicht sind sie bei feuchtem Wetter oder Schiesspulver unbrauchbar, Lunten müssen konstant am Brennen gehalten werden (Dazu sind sie mit alchemischen Stoffen behandelt, weshalb sie beim Brennen einen charakteristischen Geruch abgeben) und für das Herstellen des richtigen Kugel-Kalibers ist ein spezialisierter Kugelgiesser notwendig. Die Kaliber sind von Armee zu Armee unterschiedlich genormt, so dass beim Gegner gefundene Kugeln selten verwendet werden können.  Diese Schwierigkeiten führen dazu, dass Schiesspulverwaffen abseits vom Schlachtfeld, eher selten zu finden sind.
+%	
+%	\subsubsection*{Arkantechnische Verbesserungen}	
+%	Überall, wo sich der Bedarf nach teuren und mächtigen Waffen mit begabten Handwerkern und Alchemisten trifft, erfindet man Blitz-, Explosiv-, Naphtalium- und Kraftdruckgeschosse und was sonst noch möglich ist.
+%	
+%	Silberkugeln kosten ein Vermögen, sind aber absolut tödlich gegen Werwölfe, die ansonsten kaum zu töten sind. Wer auf der Jagd nach Vampiren, Werwölfen oder ähnlichem ist, möchte seine Munition segnen lassen. Solch ein Geschenk wird aber selten jemandem zu teil, selbst wenn er über eine tiefe Börse verfügt. Gesegnete Objekte sind gewöhnlich der Kirche vorbehalten
+%
+%	Verschiedene Meisterhandwerker haben komplizierte fragile Konstruktionen entworfen, bei deren Gebrauch weniger Zeit zum Laden benötigt wird. Solche Apparate sind aber anfällig auf Schmutz und Wetter und sehr teuer, so dass sie eigentlich nur dem Hochadel und ihren Leibgarden zugängig sind.
+%
+%\subsection*{Bomben}
+%Allen Bomben gemein ist die extrem teure oder zumindest aufwendige Herstellung. Sie unterliegen strengen Gesetzen und sind für Leute ausserhalb des Militärs oder Angehörigen von einflussreichen Organisationen nicht legal zu erwerben.
+%
+%\paragraph{Naphthanalium}
+%Naphthanalium ist ein alchimistisches Elixier, das alles verbrennt und weder mit Wasser noch mit Sand gut zu löschen ist. Die verheerende Wirkung auf die Umgebung ist beachtlich, aber auf die Moral der Angegriffenen eher noch grösser (Erst recht für Wesen mit Angst vor Feuer).
+%
+%\paragraph{Donnerbombe}
+%Diese alchimistische Substanz (auch Tonitral genannt) hat vor allem den Zweck, bei dem Auftreffen auf einem harten Punkt mit ohrenbetäubendem Getöse zu reagieren. Angegriffene sind verwirrt, taub und orientierungslos.
+%
+%\paragraph{Blendblitz}
+%Diese Formel (auch als Fulgural bekannt) bewirkt beim Einschlag am Ziel einen gewaltigen, blendenden Funkenregen, der nichts in Brand setzt, Lebewesen jedoch verwirrt und erblinden lässt.
+%\end{multicols}
+
+\newpage \section{Machinarium}
+
+\begin{multicols}{2}
+	
+%	\subsection{Geräte}
+%	\paragraph{Tiefwalder Einmann-Fluggestelle}
+%	\textit{Chrigu}
+%	Der Fluggardist trägt eine Art Rucksack mit einem Dampfmotor auf dem Rücken. Vier Schlote (nach hinten gebogen) dampfen hinter seinem Kopf. Zwei grosse, kompliziert anmutende (mit vielen Seilen und Rädern), zusammenklappbare Flügel machen die Maschine komplett. Gesteuert wird mit zwei Griffen, an denen sich 1-3 Knöpfe befinden. Die Gardisten sind mit langen (magischen?) Klingen an den Ellbogen ausgerüstet. Sie haben auch mechanische Gewehre dabei. Tatsächlich sind sie aber nicht in der Lage aus der Luft zu schiessen (dafür können sie aber an unmöglichen Orten landen). Einige tragen grosse Schildplatten mit sich. Sie sind sehr effektiv gegen Luftschiffe.
+
+	
+	\subsection{Golem}
+	\textit{"Mein neuartiger, mit Dampf und Arkantechnick betriebenes Laufgerät ist durchaus ein Golem. Sehr zur Missstimmung der Magier, die darauf bestehen, dass nur ein mit Magie belebter Lehmklotz ein Golem sein könne."}
+	\begin{flushright}
+		- Ingenieur Potzkraus aus Zetara
+	\end{flushright}
+	Der erste Golem wurde angeblich in Kralsbruck von einem Kabb'ler Weisen hergestellt, der einer Lehmfigur ein Papier mit einem geheimen Wort Gottes in den Mund gelegt haben soll. Eine Vielzahl von magisch belebten Konstrukten wird seitdem als Golems bezeichnet. Die verwendeten Methoden und Materialien sind dabei meist von Schöpfer zu Schöpfer sehr verschieden. Neben den tönernen Golems der Kabb'ler ist besonders die aus Holz gefertigte Statue des Heiligen Christoffel am Käfigturm von Tiefwald-Stadt berühmt.
+	
+	
+%	\paragraph{Steambus}
+%	\textit{Chrigu}
+%	Er zirkuliert in den zahlreichen Gnomenstädten rund um die Hochöfen von Zetara. Obwohl er von Menschen eher ungern benutzt wird wegen seinen chaotischen Fahrplänen und dafür um so regelmässigeren Pannen, geniesst er unter den Gnomen Kultstatus. Tatsache ist, Besucher werden von gnomischen Gastgebern oft dazu genötigt den Bus zu fahren und falls sie die Fahrt ablehnen, sind die Hausherren höchst gekränkt.
+	
+%	\subsection*{Luftschiffe}
+\end{multicols}
+
+
+%==================================================================================================
+\chapter{Kosmologie \& Religion}
+%		\item Vitalitas, Wachstum als Prinzip des Lebens
+%		\item Morbus, Verderben als Prinzip des Sterbens
+\begin{multicols}{2}
+	Religionen werden insbesondere auch zur Beantwortung kosmologische Fragen herangezogen, also der Frage wie die Welt beschaffen ist und wie entstanden ist. Auch die Frage, wie übernatürliche Kräfte wirken fällt meist in den Bereich der Religionen.
+	Im folgenden sollen verbreitete Grundmodelle vorgestellt werden.
+	
+	\subsubsection{Sphärenmodell des hl. Thomas}
+	Im Okzident am meisten verbreitet ist das Sphärenmodell, dessen Grundzüge vom Heiligen Thomas entwickelt wurde. Es trennt zwischen göttlichem Wunderwirken und der Magie, die weiter verschiedene Quellen hat, die alle als Sphären um die materielle Welt angelegt sind. Mehr dazu unter der Religion des Heiligen Geistes.
+	
+	\subsubsection{Animismus}
+	Bei vielen älteren Religionen, insbesondere verschiedenen Natur- und Schamanentraditionen gibt es keine klare Trennung zwischen Geist und Materie. Vielmehr hat jedes Wesen eine duale Natur, also gleichzeitig eine Erscheinung in der Geisterwelt und in der materiellen Welt. Die Stärke und Sichtbarkeit des Wesens in den beiden Welten kann dabei sehr verschieden sein. Während in den Mittelreichen die Verehrung aller Wesen ausser Gott und den mit ihm vereinigten Heiligen als Götzenkult oder Dämonenanbeterei abgelehnt wird, ist die Verehrung von Nymphen, Dryaden, Ahnen- und Tiergeistern sowie minderen Göttern z.B. in der schamanistischen Tradition des Königreichs Otepa viel wichtiger, als jene des Schöpfergottes Ologun, der sich nicht mehr in den Lauf der Dinge einmischt. Die alten druidischen Religionen im Norden glauben an mehrere Götter, die die Welt zusammen mit ihren Gegnern, den Riesen, geschaffen haben und sie pflegen den Kontakt zu Naturgeistern und Elemntaren.
+
+	
+	
+\end{multicols}
+
+\newpage \section{Der Heilige Geist}
+\begin{multicols}{2}
+	
+	\subsection{Thaumaturgie und Magie}
+	Im Glauben an den Heiligen Geist ist die Unterscheidung zwischen Thaumaturgie, also durch Menschen vermitteltes göttliches Wirken und der Zauberei sehr wichtig. Nur die Thaumaturgie, das Wunderwirken, kann tatsächlich die Naturgesetze überwinden. Wunder geschehen, wenn der Glaube eines Gläubigen so tief ist, dass die Anwesenheit des Heiligen Geistes die Schöpfung auf übernatürliche Weise verändert. Zauberei wird auch als präternatürlich (neben der Natur) bezeichnet. Im Gegensatz zu übernatürlichen Phänomenen ist Magie vielleicht nicht verstanden grundsätzlich erklärbar.
+	Während Zauberern ihre Kräfte in der Regel in die Wiege gelegt wurde, wird die übernatürlichen Fähigkeiten, die gemeinhin als Thaumaturgie bezeichnet werden, später erworben. Zauberei folgt ihren eigenen Regeln und erschliesst sich einem wissenschaftlichen Geist. Die Quelle ihrer Kraft, der Aether, kann mit Messgeräten erfasst und für arkantechnische Zwecke gebraucht werden. Dagegen entspringt die Kraft der Thaumaturgen ihrem Glauben und einer tiefen philosophischen Überzeugung.
+	
+	\subsubsection{Pilgerwege und die Weihe}
+	Überall verstreut auf Silva gibt es Orte thaumaturgischer Macht, genannt Sedoi (sing. Sedos). Diese Orte gelten üblicherweise als Heiligtümer der lokalen Kirchen und werden von diesen wie ein Augapfel gehütet und nach Möglichkeit geheim gehalten. Oft wird ein Kloster oder ein Tempel an der Stelle gebaut. Es heisst, diese Wege seien Pfade, auf denen die Heiligen gewandelt und gewirkt haben. Die Pilgerwege sind der Schlüssel zu den Geweihten (als Synonym für Thaumaturgen): Jeder Mönch, der von seinen Vorgesetzten als würdig erachtet wird, darf den Pilgerweg bereisen. Am Antritt der Reise steht oft ein mehrtägiges Fasten und Beten, das den Gläubigen in die richtige geistige Verfassung bringen soll.
+	
+	Jeder Pilgerweg besteht aus einem oder mehreren Sedoi. An jedem Sedos, typischerweise duch einen Altar oder einen grob behauenen Stein gekennzeichnet, wird gebetet und meditiert. Bei den allermeisten Probanden hat die Zeremonie keine weiteren Auswirkungen. Einige wenige jedoch erleiden plötzliche Schmerzen, Verlust von Sehkraft, Lähmungen von Gliedern bei gleichzeitiger starker Entrückung. Diese Gebrechen nehmen von Station zu Station zu, bis sie mit der Vollendung des Pilgerweges plötzlich verschwinden und der Proband seine gewonnenen thaumaturgischen Kräfte wahrnimmt. Bei denjenigen, die die Torturen davon abhalten, den Weg zu beenden, ebben die Qualen langsam innerhalb von Tagen, Wochen oder Monaten ab. Generell sind längere Wege riskanter und schwerer zu begehen, bringen aber auch stärkere Kräfte mit sich. Die genaue Form der erhaltenen Kräfte hangen vom Charakter des Probanden, aber auch vom Charakter des Heiligen ab, der den Weg beschritten hat.
+	
+	Generell sind Geweihte unglaublich geachtet und ihr Status relativiert ihre Herkunft: Geweihe von niederer Herkunft können bis in hohe Ränge aufsteigen, und Geweihte adeliger Herkunft fühlen sich ihrem Glauben stärker verbunden als ihrer Familie. Tatsächlich gibt es aber viel zuwenige Geweihte, um einen wirklichen Unterschied zu machen. Die Mehrheit aller Kirchenangehörigen sind gewöhnliche Mönche und Nonnen, Dorfpriester und sowie einige Tempelritter von niederem Adel.
+	
+	\subsection{Die Kirchen}
+	Die (reformierte) Kirche der Heiligen wird in Alber, Norge und Tiefwald verehrt, die Lehre der (orthodoxen) Kirche der Einheit Gottes wird in allen anderen nichtheidnischen Ländern befolgt.
+	
+	Die Kirchen verehren die Heiligen als Ausdruck der Kraft des einen Gottes und verfügt über die Geweihten, Mönche und Priester mit mystischen Fähigkeiten. Die jeweiligen Kirchen haben zwar einen gemeinsamen theologischen Überbau, aber die Orden der verschiedenen Heiligen haben jeweils ihre eigenen Streitkräfte und ihre eigenen Motive, die sich zum Teil stark unterscheiden können. Auch sehr unterschiedlich ist die Stärke der Verbandelung von Adelshäusern und Kirchen.
+	\begin{itemize}
+		\item Hospitaliterorden
+		\item Templer zur leeren Hand
+		\item Liga zur Verteidigung des Glaubens
+		\item Inquisition Royale Crédunnoise
+	\end{itemize}
+
+	
+	\subsection{Das Sphärenmodell}
+	Der heilige Thomas lebte von 1498 bis 1581 und war ein Geweihter im unabhängigen Orden der Parenser. Seine Gaben umfassten Visionen, mit deren Hilfe er die kosmologische Ordnung zu ergründen suchte. Das gewonnene Wissen teilte und verfeinerte er in gelehrten Aufsätzen und Diskussionen. Er wurde von beiden Kirchen heilig gesprochen.
+	
+	Auch wenn viele andere Modelle existieren, die Kosmologie des hl. Thomas ist sicher die in den Mittelreichen verbreitetste und populärste. Er ist der offizielle Kanon beider Kirchen und vieler Magieakademien und stützt sich auf die heilige Schrift.
+	Auf die Schöpfung der Planeten und Sterne aus dem Nichts und die Trennung von Licht und Schatten (durch die Sterne) folgt die Trennung von Körper und Geist (die Thomas interpretiert als Trennung der Realwelt vom feinstofflichen Aether) und die Trennung von Himmel und Erde (interpretiert als das Gestalten des Planeten Silva). Schlussendlich folgt die Trennung von Leben und Tod, verbunden mit der Kreation der Seele und des freien Willens. Gestützt auf dieses Modell beschreibt Thomas die verschiedenen, einander durchwirkenden Ebenen:
+	
+	Die Oberfläche des Planeten Silva, das Unterreich und das darunter, nahe am Planetenkern liegende Kerkerreich bilden die \textbf{Materielle Sphäre}.
+	
+	Stark mit dem Aether verbunden sind die Sphären der Feen, die \textbf{Anderswelt}, wo Zeit und Raum nach anderen Regeln spielen.
+	
+	Der Aether selbst ist unterteilt in den \textbf{Abyss}, auch Hölle, wo die Dämonen wohnen, die sich gegen Gott gewandt haben. Eine verdorbene Seele, die nicht von Gott erlöst wird, kann sich nicht aus dem Aether lösen und treibt schliesslich in den Mahlstrom des Abyss, wo sie auf Ewigkeit, versklavt und gefoltert wird.
+	
+	Die Seele der Erlösten werden von Gott aufgenommen und sind wie Er allgegenwärtig. Die gläubigsten und heiligsten Seelen dürfen dabei die Menschen in ihrem Streben nach Erlösung unterstützen, weshalb als thaumaturgische Kräfte weiterhin präsent sind.
+
+	\subsection{Ketzerei und Kulte}
+
+	Im allgemeinen Sinn wird das Wort Ketzer für alle gebraucht, die vom rechten Glauben abgefallen sind und Irrlehren verbreiten. Im besonderen meint man damit aber Menschen (und andere Wesen), die thaumaturgische Kräfte besitzen, ohne dabei aber den Lehren der Kirche zu folgen. Dies umfasst Gläubige, die nicht-santionierte Heilige anbeten (von der Kirche manchmal als Schwarze Heilige oder Unheilige bezeichnet werden) oder einer kleinen Splitterreligion angehören. Oft sind diese Gläubigen in Mysterienkulten organisiert, die sich meist durch grosse Geheimhaltung und Vorsicht gegenüber Aussenstehenden kennzeichnen.
+	
+	Daneben gibt es diejenigen, die mehr ideologisch oder philosophisch als religiös geprägt sind, aber trotzdem thaumaturgische Kräfte besitzen. Darunter zählen auch jene, die den Glauben an Gott verloren haben, aber immer noch (evtl. in modifizierter Form) an dessen Gebote glauben. Ungläubige haben es auch schwer, Anschluss an einen gottesfürchtigen Mysterienkult zu finden. Manche können sich einem Hexen-, Schwarzmagier- oder Druidenzirkel anzuschliessen. Für die ganz Unglücklichen bleiben neben der Suche nach Wissen auf eigene Faust nur die Sekten des Namenlosen.
+	
+	Unabhängig vom exakten Inhalt ihres Glauben werden Ketzer als Anhänger des Namenlosen von der Inquisition und ähnlichen Institutionen gnadenlos gejagt und ermordet.
+	
+	\subsubsection{Weihe von Ketzern}
+	Wie Ketzer ihre Kräfte erhalten ist sehr unterschiedlich. Manche werden von einer Geheimorganisation aufgenommen und initiert, wie es auch in der Kirche schon abgelaufen wäre oder aber sie erforschen einen Sedos auf eigene Faust, manchmal auch unbewusst. Allen gemein ist aber der tiefe Glaube an die eigenen Prinzipien, Heiligen, Götter und Wertvorstellungen.
+
+	\subsubsection{Feilscher, Henker, Rabenvater}
+	Besonders verbreitet ist der Mysterienkult der die Heiligen der Kirche um drei Heilige erweitert: Den Feilscher, Den Henker und Den Rabenvater.
+	Der Feilscher ist dabei ein Mensch mit Bocksfüssen, der über gemachte Abmachungen wacht und vor Betrug schützt, oder aber Diebe beschützt. Der Henker ist ein riesiger Mann mit glühend roten Augen und einer zweihändigen Streitaxt. Der Rabenvater erscheint als Alter Mann mit Stock und zwei Raben. Es kursieren viele Geschichten über Menschen, die versucht haben die drei Heiligen zu betrügen, aber sich dann in ihren Versprechungen verheddert haben und schlussendlich ihre Seele verloren. Wer sich aber an die Gesetze hält, hat nichts zu befürchten.
+	
+	Seine Anhänger findet der Kult unter den reisenden Söldnern, Bestientötern, Schaustellern und Gaukler, sowie ganz allgemein unter den Reysenden und Zigeunern. In vielen Regionen Tiefwalds und des hohen Nordens wird der Mysterienkult schweigend geduldet, da er sich als unausrottbar erwiesen hat. Der beliebteste Erklärungsansatz unter Kirchengelehrten für die Geweihten in den Reihen des Mysterienkults ist. dass es sich bei den drei Heiligen um die getarnten Erzdämonen Zholvar (Der Feilscher), Belhahar (Der Henker) und entweder Thargunitoth oder Blakharaz (Rabenvater) handeln soll. Insbesondere die Figur des Rabenvater soll dabei aus den alten heidnischen Religionen stammen.
+	
+
+\subsubsection{Schattenhexen}
+	\textit{ „So gebe ich dir mein Wort, Henricus, dass ich dir Treue halten werde, solange du den Idealen die Treue hältst, für die ich lebe. Wir sind nicht hier, um uns diese Welt untertan zu machen, sondern um sie zu befreien. Niemand soll mit der Furcht vor einem toten Gott gefügig gemacht werden."
+		\begin{flushright}
+			- Treuegelöbnis der unhl. Nesmodyne \\
+			aus "Chronik der Magierkriege"
+		\end{flushright}
+	}
+	
+	Als Schattenhexen werden eine Gruppe Geweihte bezeichnet, die die Kirche als Werkzeug der Unterdrückung ablehnen. Sie glauben nicht an ein Schicksal (und manche nicht einmal an einen Gott), sondern das jeder sein Leben selber formen kann und soll. Schattenhexen sind jeglicher Form von Hierarchie gegenüber kritisch eingestellt. Machtmissbrauch ist ihnen ein besonderes Gräuel.
+	
+	Manche Schattenhexen berufen sich auf die Schwarze Heilige Nesmodyne, die in den Magierkriegen als Feldherrin für Henricus von Albast gekämpft hat. Sie war verantwortlich für das Schwarze Wunder von Rizziva und tötete den Hl. Ottmar von Sklerig und den Erzmagier Lord Archibald of Skaland in Duellen auf dem Schlactfeld.
+	
+	Der \textbf{Moralkodex} umfasst Gleichheit aller kulturschaffenden Wesen, Kritik gegenüber Hierarchie, Verantwortung der Starken für die Schwachen zu sorgen, Bestrafen von Ungerechtigkeit, Kampf gegen Sklaveri und weitere anarchistische Ideen.
+\end{multicols}
+
+
+\newpage \section{Kabb'l}
+\begin{multicols}{2}
+Bei den Kabb'ler haben die Heiligen weniger moralische Eigenschaften und gelten stattdessen als besonders weise Männer und Frauen, die besondere Einsicht in göttliche Geheimnisse besitzen. Es wird keine strikte Trennung zwischen Magie, Alchemie, Technik, Medizin auf der einen Seite und göttlichem Wirken andererseits gemacht. Neben der Unterweisung in heiligen Schriften wird den PriesterInnen, genannt Chacham (Männer) und Maharat (Frauen), auch vieles anderes magisches und nichtmagisches Wissen beigebracht. Ausserhalb der Republik Nyzrathi gibt es aber nur sehr wenige weibliche Priester.
+
+\subsubsection{Kultur}
+Die Kabb'ler sind eine reiche und gebildete Volksgruppe. Sie begreifen sich in erster Linie als Kabbler und fühlen sich keinem König oder Nation verpflichtet, wofür sie in vielen Orten kritisiert werden. Zu Nyzrathi fühlen sie aber eine besondere Verbundenheit, weil sie in der Organisation der Stadt mit ihren vielen Logen, Zirkel und Räten und der Herrschaft durch weise Frauen ihre Ideale wiedererkennen. Insbesondere  männliche Priester, die sich an der grossen Macht des Hexenrates stören, unterstützen gerne den Dogen.
+
+Die Kabb'ler beanspruchen die Schöpfung des ersten Golems, die Erfindung der Alchemie und die Entwicklung der Arithmetik für sich.
+\end{multicols}
+\newpage \section{Ougdou}
+\begin{multicols}{2}
+Ougdou ist hauptsächlich in der Republik Nyzrathi und an der Nordküste des Südkontinents verbreitet. Ougdou vereinigt viele ältere regionale Glauben und ist deshalb stark lokal geprägt. Im folgenden wird vor allem auf Ougdou Nyzrathi eingegangen, die in der Republik und Stadt Nyzrathi verbreitete Glaubensrichtung.
+
+Es gibt einen allmächtigen Gott oder Geist, den Demiurg (Schöpfer), der sich jedoch nach der Schöpfung aufgelöst hat und nicht als Person verstanden wird. Er meist dem Vorbild der Otepa entsprechend Olorun genannt. Angebetet werden die Loa, mächtige Geistwesen, die den Menschen Dienste erfüllen im Gegenzug gegen Opfer und Verehrung. Während die Heiligen der Mittelreiche als Mittler zu Gott fungieren und ihre Motivation aus ihrer Liebe zu den Menschen erhalten, die sie auf ihrem Weg zur Erlösung unterstützen wollen, sind die Loa grundsätzlich nichtmenschlich, auch wenn sie manchmal solche Form annehmen und haben ganz unterschiedliche Bedürfnisse und Gelüste.
+
+\subsubsection{Der Unterschied zwischen Thaumaturgie und Zauberei}
+Grundsätzlich werden übernatürliche Heilungen Zauber und ähnliches von den Geistern gewirkt. Ein Zauberer ist nun jemand, der einen Geist zur Verfügung hat, der die Arbeit für ihn tut. Im Gegensatz dazu steht ein Besessener in direktem Kontakt mit einem mächtigen Geistwesen. Dazu wird der Loa ein Aspekt des Charakters des Besessenen und die mystische Kraft wird freigesetzt, wenn der Besessene im Sinne des Loa handelt. Während im Okzident einem Heiligen besondere Gottesfürchtigkeit und Weisheit zugeschrieben wird, aber auch Demütigkeit und Altruismus verlangt wird, ist die Erwartungshaltung gegenüber den Besessenen davon abhängig, mit welchem Loa man ihn in Verbindung bringt. Die Priesterinnen des Ougdou werden Mambo genannt und gelten meist, als von den Loa inspiriert. Sie versuchen jedoch eine Balance zu halten, während richtige Bessessene meistens die Aspekte eines einzelnen Loas besonders hochhalten.
+
+\subsubsection{Moralische Gebote}
+Besonders wichtig sind Grosszügigkeit und Toleranz gegenüber anderen. Ougdou akzeptiert alle sexuellen Orientierungen und toleriert alle anderen Religionen. Im Gegensatz zu vielen anderen Religionen kommt Ougdou nicht mit einem Rechtssystem. Das Rechtsystem gilt als völlig menschengemacht und grundsätzlich nicht perfekt. Deshalb wird auch besonderen Wert auf Versöhnung gelegt, da es den einzigen Ausgang in einem Konflikt darstellt, in dem alle Seiten profitieren und die Ungerechtigkeit, die in jeder menschlichen Rechtsprechung inne sein muss, erträglich macht.
+\end{multicols}
+
+
+
+%==================================================================================================
+\chapter{Die Mittelreiche}
+
+\begin{mcolsec*}{Gesellschaft}
+
+\subsection{Oberschicht}
+Der hohe Adel ist zugleich der hohe Klerus, denn es wird natürlich streng darauf geachtet, dass die Macht in den Händen der edlen Familien und des reinen Bluts bleibt. Der Adel gründet seine Vormachtsstellung auf Magie, Reichtum, Gewalt und rechtliche Privilegien. Die überwiegende Mehrheit aller Magieanwender, seien es Magier, Alchemisten oder Kleriker sind adelig, denn es ist in allen Mittelreichen bei Todesstrafe verboten, ohne Lizenz Magie zu wirken, und selbstverständlich dürfen nur der Adel, die Kirchen und die magischen Gilden (die ihrerseits jeweils eine Ermächtigung durch den Adel oder Klerus benötigen) eine solche Lizenz ausstellen. Ausserdem sind viele der wichtigen magischen Universitäten nur Adeligen zugänglich.
+	
+	Während ein magischer Gegenstand in der Mittelschicht ein kostbares Gut und in den Slums ein Anlass für einen Bandenkrieg ist, sind sie in den Adelshäuser im Überfluss vorhanden, ein weiterer Quell für Macht und Geld.
+	Magische Lichter erleuchten die Hallen, magisches Feuerwerk wird bei jeder nur erdenklichen Feier in verschwenderischem Masse gen Himmel geschickt und die Wohnorte der Adeligen sind so stark mit Bannsprüchen und Protektionszaubern belegt, dass die meisten der Festungen und Prunkbauten einen lebenden Hausgeist entwickeln.
+	
+	Die Vorherrschaft des Adels gründet ausserdem in seiner militärischen Macht. Mit seinem Geld kann er Söldnerheere auf die Beine stellen und zerstörerische Zaubersprüche ergänzen ein Arsenal von magischen Schwertern und Rüstungen. Doch der eigentliche Punkt ist das Wissen um Kampfkunst und Kriegsführung. Taktische Unterweisungen gehören zu der Erziehung jedes Adeligen und in Familien ist es Sitte, die spätergeborenen Jungen in Ritterorden, Universitäten oder sogar in Assassinenschulen zu stecken, damit sie der Familie möglichst viel Nutzen bringen.
+	
+	\subsubsection{Magier als Machtmittel}
+	In drei verschiedenen Kategorien finden sich Magier zusammen: Sowohl die Kirche wie die Adelshöfe haben ihre eigenen Magier, mit den lizensierten Gilden aber hat auch der Mittelstand einige Zauberer. Magier des Mittelstands verkaufen ihre Fähigkeiten meist an den Meistbietenden und machen Auftragszaubereien, wie Schutzzauber für ein Haus, oder ein Feuerwerk für den Geburtstag eines bedeutenden Händlers. Der eine oder andere schliesst sich vielleicht auch als Soldmagier einer fähigen Truppe an, obwohl dies mit erheblichem Prestigeverlust einhergeht. In jedem Fall aber liegt die Kontrolle der Magier bei den Adeligen. Es ist kaum möglich, ohne einen Adelstitel Gildenvorsteher zu werden. Ausserdem wurde ein perfider Mechanismus entwickelt, die Zauberer unter Kontrolle zu behalten:
+	
+	Jeder Magier schuldet seiner Gilde ungeheure Summen. Ein Zaubereibegabter niedriger Herkunft, muss sich zuallererst in eine Gilde einkaufen, um eine Lizenz zu erhalten. Ohne diese Lizenz ist Zauberei illegal und der Anwender Freiwild. Dazu kommen Kosten für die Ausbildung, teure Bücher, Unterkunft und standesgemässe Kleidung. Wer der Gilde Geld schuldet, kann kaum durch die Ränge aufsteigen oder günstige Positionen in Forschung und Lehre erhalten. Durch fleissige Arbeit alleine können diese Schulden nicht beglichen werden, schon gar nicht, wenn für arme Leute gearbeitet wird. Einer Festanstellung an einem Adelshof, in der Kirche oder bei einer Handelscompagnie geht meistens die Übernahme der Schulden durch einen Mäzen voraus.
+	\subsection{Mittelschicht}
+	Der Mittelstand geniesst zwar nicht die rechtlichen Privilegien des Adels, im Gegensatz zu den Ärmsten hat ein Mitglied des Mittelstandes ein regelmässiges Einkommen, Arbeit und muss nicht ums tägliche Überleben kämpfen. Vermögende Handwerker, Bezirksrichter und andere höhere Beamte, Ärzte, Alchemisten, Händler und reiche Bürgersfamilien sorgen für die Veränderungen in den Städten, während die Niederen nur an die nächste Mahlzeit denken und der Adel seinen Lustbarkeiten und Intrigen frönt. Der Mittelstand ist oftmals in verschiedene Gilden, Zünfte und Stadträte verbunden. Diese Organisationen haben einen beträchtlichen Einfluss auf das alltägliche Leben in der Stadt. Es existieren sogar einige wenige Städte, die vom König mit besonderen Privilegien ausgestattet wurden und nicht von einem Adeligen regiert werden. Solche „Freie Städte“ sind meist an Knotenpunkten des Fernhandels.
+	
+		\includegraphics[width=0.35\textwidth]{b/alchemist.jpg}
+	
+	\subsubsection{Alchemisten und Arkantechnicker}
+	Alchemisten machen hochwertige Produkte und in fast jedem Beruf findet sich etwas, das mit Alchemie veredelt werden kann. Arkantechnicker erfinden Apparate  Dies ist eine der Möglichkeiten, die einem Mittelständischen bleiben, der keine oder kaum magische Begabung hat, sich mit arkanen Wissenschaften auseinanderzusetzen, denn alle vergleichbaren Künste fallen unter das Magieverbot für Nichtadelige und Nichtgildenangehörige. Natürlich müssen auch angehörige dieser Professionen  eine Lizenz ihrer Gilde besitzen.
+	\paragraph{Magistri Hortulani} Die Meister der alchemischen Gärtnerkunst sind ein Bund von Alchemisten und Botanikern, die sich zusammengetan haben um eine der interessantesten Gilden zu formen, die die Welt je gesehen hat. Die Forschungen der Gilde haben bereits Wasserbäume, Luftholz und viele grossartige Früchte und Gemüse hervorgebracht. Die allermeisten Mitglieder stehen im Sold des Adels und anderer reicher Leute, wo ihnen ein Garten und die alchemischen Gerätschaften und Substanzen zur Verfügung gestellt werden. Im Gegenzug versuchen sie alle Konkurrenten mit ihren Kreationen auszustechen. Wer kreiert die schönsten Pflanzen mit den besten Effekten?
+	
+	\subsubsection{Handelsconsortien und -compagnien}
+	Unermesslich reiche Händler, die über gewaltige Flotten von See- und Luftschiffen gebieten. Es gibt nichts womit nicht gehandelt wird: Getreide, Glas, Tabak, Kaffee, Waffen, Maschinen, Magie und Menschen.
+	Die besonders erfolgreichen Händler mit vielen adeligen Freunden bekommen vielleicht sogar ein vom König verbrieftes Monopol zugesprochen. Wie zum Beispiel die Compagnie Royale Crédunoise du Sud oder der tiefwäldische Kontor Stark und von Herms, die ein  Monopol auf den Handel mit Baumwolle in den südlichen Kolonien haben.
+	Einige Consortien leisten sich sogar ein stehendes Heer oder zumindest grosse Sölndertrupps, gewiss aber leisten sie sich mindestens einen Magier, den sie aus der Schuld seiner Gilde freigekauft haben. Für den Magier ist dies mit einem Prestigezuwachs verbunden.
+	
+
+	
+	
+	
+	\subsection{Unterschicht}
+	Ohne genug zu essen zu haben, ackern sich die Leibeigenen auf den Feldern und Manufakturen ihrer Besitzer kaputt. Wer Glück hat, gehört einem höheren Fürsten, der seine Ländereien mit Kämpfern und Rittern schützt. Sie leben von der Hand in den Mund.
+	Die Bewohner der Armutsviertel einer Stadt sind zwar insofern freier als dass ihr eigenes Leben ihnen selbst gehört, werden aber noch stärker von Hunger und Gewalt geplagt, als jene auf dem Land. Wer nicht bei einem Handwerker oder bei einer reicheren Familie eingestellt wird, ist in den Slums Freiwild. Diebesbanden liefern sich Gefechte, Schutzgelder werden erpresst und Leute werden in der Dunkelheit niedergestochen und bis auf die Haut bestohlen. Bettler und verhungernde oder dahinsiechende Kreaturen liegen auf der Strasse, - oder besser – auf dem knietiefen Morast, der in diesen Vierteln als Strasse gilt.
+	
+	Neben diesen Ärmsten der Armen, die den Grossteil der Bevölkerung ausmachen, gehören natürlich alle Handwerker und sonstigen Arbeiter wie Schiffsleute, Soldaten und Söldner, freie Bauern und Quacksalber zu diesem Stand. Handwerksgesellen, Mönche und Söldner auf der Strasse, die an keinem Ort zu Hause sind und von Arbeit zu Arbeit weiterreisen, nennen sich Reysfolk. Der Begriff ist nicht zu verwechseln mit Zigeuner und anderen Vogelfreien, denn bei den Reysenden handelt es sich um freie Männer und Frauen, wenigstens dem Namen nach.
+	
+	\includegraphics[width=0.45\textwidth]{b/Soeldner}
+	\subsubsection{Söldner, Kopfgeldjäger und Freibeuter}
+	
+	Freischaffende Kämpfer, die sich für gutes Geld in den unzähligen Rangeleien zwischen den Adelshäusern als Leibwächter, Wachen, Kriegstruppen und Mörder anstellen lassen, aber auch als Bestienjäger und Schatzsucher. Auch verarmte Adelige finden hier Zuflucht. In diesem Menschenschlag sind neben der Kirche der Heiligen auch noch viele Mysterienkulte und abergläubische Sagen verbreitet, die sich zum Ärger der Kirchen als nahezu unausrottbar erwiesen haben. Überhaupt wird unter diesen Menschen wenig nach Glaube und Herkunft gefragt, wichtig sind nur ein wacher Geist und ein geschickter Schwertarm. So kommt es, dass hier Magiedilettanten, Verbrecher und sogar Ketzer und Werwesen zu finden sind.
+	Besonders der Mysterienkult um 'den Henker, den Feilscher und den Rabenvater' stellt eine beachtliche Gewalt dar und verfügt auch über Geweihte, was einige wenige regionale Teile der Kirche bewogen hat, die drei Gestalten des Kultes als Heilige anzuerkennen. Die meisten anderen ziehen es vor, solche Geweihte als Ketzer zu verbrennen.
+	Einige Gruppierungen:
+	\begin{itemize}
+		\item Die Kriegsknechte von Delb
+		\item Die Drachentötergilde
+		\item Gilde der starken Männer
+		\item Der Söldnerbund
+	\end{itemize}
+
+\end{mcolsec*}
+
+\newpage \section{Tiefwald \& Serebryany Bor}
+\begin{multicols}{2}
+	Die Herzogtümer Tiefwalds bilden den Kern des Imperiums. Tiefwald ist ein Reich, das sich auf goldenen Zeiten zuzubewegen scheint. Aus den Kolonien fliessen, Gold und Silber in die Kassen, Sklaven und Güter aller Art auf die Märkte. Als einer der wenigen Herrscher lässt Armenius den Mittelstand am neuerworbenen Wohlstand teihaben, und schafft sich so wichtige Verbündete und Allianzpartner.
+	
+	\subsection{Serebryany Bor}
+	
+	Die Provinz Serebryany Bor wird von tyrannischen Kleinfürsten regiert. Und nicht nur in den Wäldern treiben sich, bedingt durch die unmittelbare Nähe zu Daemonia widernatürliche Gestalten herum: Von manch einem Landlord heisst es, er sei ein Vampir, der sich in der Nacht aus seinem Sarg erhebt und sich über zarte Jungfrauen hermacht. Auch der gelegentliche Werwolf wird dort gesichtet und dann vom Pöbel zum Scheiterhaufen gebracht, auch wenn es der herzensgute Dorfpfarrer sein sollte, der zu viele Haare hat. Der Menschenschlag dort ist misstrauisch, gemein und hinterhältig.
+	
+	
+	\subsection{Tiefwald}
+	
+	\subsubsection{Der Imperator und sein Gefolge}
+	Der Erzherzog von Tiefwald, König von ganz Tiefwald und den Kolonien Übersee, Protektor Custodias von Serebryany Bor, \textbf{Arminius von Hohenkliff} ist nun schon der dritte von Hohenkliff, der von den Kurfürsten zum  König gewählt und ein Ende ihrer Hegemonie ist nicht abzusehen, denn wie schon sein Vater und Grossvater ist Arminius ein brillianter Politiker, Herrscher und Feldherr. Nie waren die Kolonien ruhiger, der Mittelstand zufriedener und die Kirche von der Krone abhängiger. Mit der Gründung der königlichen Universität, zu der insbesondere auch Nichtadelige zugelassen sind, und an der die niederen arkanen Küste gelehrt werden, hat er allerdings die Magier sehr verärgert.
+	\begin{itemize}
+		\item \textit{Kurfürst Richard 'Der Dorn' von Lohzirn} Der Herzog von Lohzirn, Kommandant der königl. Waldläufer und Garde, Busenfreund von Imperator Arminius und  Geheimrat im 2. Rat ist einer der wichtigsten Männer der Welt. Seine graue Haare und sein sehr hartes Gesicht, täuschen nicht darüber hinweg, dass er sich wahrhaftig mit Leib und Seele Imperator Arminius und dem Reich verschrieben hat.
+	\end{itemize}
+	
+	\subsubsection{Die Kirche in Tiefwald und Serebryany Bor}
+	
+	Im Herrschaftsgebiet des tiefwäldischen Kaisers werden beide Kirchenlehren befolgt: Die Tiefwäldische Kirche der Einheit Gottes Kirche der Heiligen (reformiert) in Tiefwald und Übersee und Kirche der Einheit Gottes in Serebryany Bor.
+	
+	\begin{itemize}
+		\item\textit{Kardinal Bastian Schneebeere} Er ist reich und mächtig. Wieso sollte er sich also etwas vorschreiben lassen. Wenn er gerne kleine Mädchen hat, kann er diese auch kriegen. In der Unterschicht gibt es ja genug, selbst welche die sowieso ausgesetzt wurden. Aber diese erwecken einfach nicht seinen Jagdinstinkt. Er findet es viel stimulierender, wenn er ein Mädchen nicht so einfach kriegt und dieses sich noch wehrt bis am Schluss. Er hat schon zahlreiche Opfer, auch aus der Oberschicht, missbraucht.
+		Ausserdem haben es ihm auch die dunklen Künste sehr angetan. Er praktiziert sie natürlich nicht selber, aber er hegt engen Kontakt. Immerhin braucht er diese um in seinem Alter noch im Bett mitzuhalten (den Gerüchten nach, lässt er sich manchmal sogar besetzen, um richtig die Sau rauszulassen).
+		Die Inquisition in Tiefwald würde ihm natürlich ein Dorn im Auge sein und somit ist sie das Einzige, das er fürchtet.
+	\end{itemize}
+	
+	\subsection{Institutionen}
+	
+	\paragraph{Rat der Adelshäuser}
+	Der Rat der Adelshäuser wählt den Imperator aus ihren Reihen. Er hat jedoch mehr repräsentative Funktion und bei diesen Wahlen gibt es kaum Überraschungen. Die wichtigen Entscheidungen werden im Königlichen Geheimrat gefällt.
+	
+	\paragraph{Königlicher Geheimrat} Auch genannt der zweite Rat. Ein Geheimrat von hohen Adeligen der Hauptstadt Tiefwalds, die meist unter dem Vorsitz des Königs über die wichtigsten Angelegenheiten des Reiches, insbesondere über den Erlass von Verordnungen, Beschluss fassen. Die letzte Instanz ist der Imperator persönlich. Auch die Erlaubnis zu heiklen Ermordungen durch eines der „Staatskabinette für interne Angelegenheiten“ fällt unter die Verantwortung dieses Rates. Diese Assassinengilden von Tiefwald sind fürchterlich verzankt und im ewigen Wettstreit.
+	
+	\paragraph{Akademie für Alchemie und Technick} Die Königlich-Tiefwäldische Akademie für Alchemie und Technick versucht die klügsten Köpfe für den wissenschaftlichen Fortschritt des Reiches zu gewinnen. Flugmaschinenkonstruktion, Zauberschmieden, Chirurgie und thaumatische Waffentechnick sind Vorlesungen, die man dort besuchen kann. Unter den Adeligen ist die Schule nicht angesehen, weshalb hier vor allem Magiedilettanten und reiche Bürgersprosse studieren.
+	
+	\paragraph{Komissariat für Magische Verbrechen} In Tiefwald obliegt die Aufgabe, unlizensierte Magieanwender zu finden, dem gnadenlosen Komissariat für magische Verbrechen. Die Kirchen stören sich sehr daran, dass es ihnen nicht gestattet ist, diese Aufgabe auszuführen wie in den Nachbarländern. Die Magiergilden dagegen befürworten diese staatliche Institution.
+	
+	\paragraph{Magiergilden} Jede grössere Stadt hat mindestens eine Magiergilde, manche sogar mehrere. Die mächtigste Gilde ist sicherlich diejenige von Tiefwaldstadt, die sich auch gerne als die Dachorganisation aufspielt.
+	\begin{itemize}
+		\item\textit{Convocata Mathilde von Lach} Als sie klein warm, hat Hofmagister Magnus Stefan Freudenbein sie aufgenommen und ihr Magie beigebracht. Sie hat ihn aber schnell überflügelt in fast allen Kategorien (ausser Freudenbeins Spezialgebiete, in denen er unschlagbar ist) und ist heute ohne zweifel die mächtigste Magierin in Tiefwald-Stadt (allerdings haben mächtige Magier die Tendenz sich in die Einsamkeit zurückzuziehen und es ist deshalb durchaus möglich, dass in den Wäldern von Tiefwald noch viel mächtigere Magier hausen).Sie ist Gildenherrin (Convocata) der Magier-Gilde und der Magie-Universität und hat einen Sitz im 2. Rat
+		Selbst sie kann höchstens raten wie alt Stefan Freudenbein wirklich ist.
+	\end{itemize}
+	
+	\paragraph{Königliche Waldläufer} Diese Elitesoldaten sind dem Imperator treu ergeben. Nicht nur sind die Waldäufer hervorragende Krieger und Leibwachen, sie dienen auch als Augen und Ohren des Imperators und bewachen die Wälder Tiefwalds.
+	
+	\paragraph{Spitzelnetzwerk} Wenn ein Imperium funktionieren soll, wie ein gut geschmiertes Räderwerk, müssen die Herrschenden informiert sein. Dazu bespitzeln sich alle gegenseitig.
+	\begin{itemize}
+		\item\textit{Ainbald der Informant} Es gibt scheinbar nichts, das er nicht weiss. Aber er ist nicht leicht zu finden. Tatsache ist, meistens findet er seine Kunden. Alles was einem übrigbleibt, wenn man ihn braucht, ist dies bekannt zu machen, so dass er Kontakt aufnimmt. Aber nur weil man mit ihm in Kontakt getreten ist, heisst das noch nicht, dass man seine Information wirklich bekommt. Er ist nicht an Gold interessiert und lässt sich oft ausgefallene Zahlungsmethoden einfallen.
+		Wenn man ihn im Nachhinein zu beschreiben versucht, stellt man fest, dass man sich nur noch schwer an bestimmte Merkmale seines Äusseren erinnern kann. Ausserdem wird er auch nicht auf arkanen Überwachungsgeräten aufgezeichnet und seine Spuren verwischen sich von selbst.
+	\end{itemize}
+	
+	
+	
+	%Tiefwald-Stadt
+	\subsection{Tiefwald-Stadt}
+	
+	Die Hauptstadt von Tiefwald.
+	
+	\paragraph{Stadtrat Tiefwald-Stadt} Obwohl der Stadtrat keine formalen Befugnisse zur Regierung des Reiches hat, werden seine Mitglieder oft vom Imperator konsultiert. Damit erhält prinzipiell auch der bürgerliche Stand eine Stimme. Neben den Patriziergeschlechtern erhalten der Rektor der königl. Akademie für Alchemie und Technick sowie die Convocata der Magiergilde einen zugesicherten Platz im Stadtradt.
+		\begin{itemize}
+		\item\textit{Convocata Mathilde von Lach} Als sie klein warm, hat Hofmagister Magnus Stefan Freudenbein sie aufgenommen und ihr Magie beigebracht. Sie hat ihn aber schnell überflügelt in fast allen Kategorien (ausser Freudenbeins Spezialgebiete, in denen er unschlagbar ist) und ist heute ohne zweifel die mächtigste Magierin in Tiefwald-Stadt (allerdings haben mächtige Magier die Tendenz sich in die Einsamkeit zurückzuziehen und es ist deshalb durchaus möglich, dass in den Wäldern von Tiefwald noch viel mächtigere Magier hausen).Sie ist Gildenherrin (Convocata) der Magier-Gilde und damit Dekanin der magischen Fakultät der Universität Bernils.
+		Selbst sie kann höchstens raten wie alt Stefan Freudenbein wirklich ist.
+	\end{itemize}
+	
+	\subsubsection{Die Burgstadt}
+	Im oberen Teil der Stadt wohnen die reichsten Patrizierfamilien und Adeligen. Jede Adelsfamilie, die etwas zählt und ihren Einfluss bei Hof gelten machen will, unterhält in der Burgstadt einen unerhört teuren Prunkbau. Die Botschaften fremder Staaten sind ebenfalls hier zu finden. Läden verkaufen Luxusartikel, seltene Kolonialwaren und teuerste Stoffe aus aller Welt. Eine dicke aber altertümliche Mauer geht von der Festung aus um die Burgstadt und zeugt davon, dass dies der älteste Teil der Stadt ist.
+	
+	\paragraph{Festung Nydegg} Die angeblich mächtigste Festung der Welt, türmt hoch in den Himmel. An den Flanken sind Andockstellen für Luftschiffe, so dass die Allerhöchsten gar nicht mit der Stadt in Berührung kommen müssen. Die Festung ist die Residenz des Hochkönigs Arminius, seiner Familie und seiner engsten Vertrauten, sowie den Höflingen.
+	
+	\paragraph{Königshof} Der Hof des Königs hat ein riesiges Eigenleben entwickelt. Der gewaltige Reichtum, der in Tiefwald-Stadt kumuliert ist, führt dazu, dass prunkvolle Feste und Bälle veranstaltet werden, an denen exotischen und kostspieligen Genüssen gefrönt wird. Es ist ein Sehen und Gesehenwerden, an dem der Imperator selbst äusserst selten teilnimmt. Nichtsdestotrotz werden hier wichtige Netzwerke gepflegt und Päkte geschlossen.
+	\begin{itemize}
+		\item\textit{ Magister Magnus Stefan Freudenbein}, Hofmagier
+		Keiner weiss wie alt der Hofmagier wirklich ist. Er scheint genau so alt zu sein wie die Festung selbst und dennoch völlig nutzlos. Er hat ein Loch in der Mauer kreiert, das er konstant durch eine Illusion versteckt hält (mit Hilfe eines Artefakts). Diesen Durchgang nutzt er um insgeheim Frauen, vor allem Prostituierte, in die Festung zu schmuggeln, wo er ihre Dienste braucht und sie danach den Geheimgang vergessen lässt. Er kennt nur Magie, die ihm für seine Freuden und Lüste nützlich sind, in diesen ist er jedoch unübertroffen.
+	\end{itemize}
+
+	\paragraph{Zytglogge} Das Torhaus Zytglogge trennt Burg- und Mittelstadt und beherbergt verschiedenste magische Apparate, die - zusammen mit ihren Gegenstücken in der Festung - die Burgstadt mit einem Schutzschirm aus diversen Zaubern überziehen. Ausserdem prangt eine riesige Uhr an der Fassade und die Glocke schlägt Stille, die jedes Geräusch verschluckt, ausser dasjenige der Münsterglocke.
+	
+	\subsubsection{Mittelstadt}
+	Der \textbf{Käfigturm} trennt die Mittelstadt von der Vorstadt. Der Käfigturm ist ein dicker, etwa sieben Stockwerke hoher Turm. Unten ist das Tor mit Fallgattern, daneben eine breite Tür, durch die man in den Turm kommt. Über dem Tor steht eine gewaltige \textbf{Statue des heiligen Christoffel}, von der man sagt, sie sei ein Golem, der bei Belagerung der Stadt zum Leben erwacht, um die Stadt zu verteidigen. Der Käfigturm ist über und über mit Käfigen bedeckt, die an schweren Ketten an der Aussenwand herabhangen. Sie sind in der Regel leer, weil heutzutage ja bessergestellte Anwohner da sind, aber die Drohung ist unverhohlen. Auch die Inneren Zellen sind nur kurz belegt, das eigenetliche Gefängnis befindet sich ausserhalb der Mauern.
+	Im Turm hat der Major der Grenzwache sein Büro und die höheren Strafverfolgungsbehörden der Stadt benutzen den Turm, um Verdächtige abzuklären, bevor sie dann in ein Gefängnis einer Behörde verschwinden (oder für immer).
+	\begin{itemize}
+		\item \textit{Meister Garros} ist der Folterknecht, der im Turm seine Festanstellung hat. Er ist ein fetter, schwitzender Glatzkopf mit einer Lederschürze, auf der verschiedenste getrocknete Körperflüssigkeiten sind. Die Schürze beherbergt einen Haufen Zangen, Klemmen und Messer, sowie ein Notizbuch, in dem er seine Arbeit säuberlich dokumentiert.
+	\end{itemize}
+	
+\end{multicols}
+
+%ALBER
+\newpage \section{Alber}
+\begin{multicols}{2}
+	
+	\subsection{Caergoch (Protektorat)}
+	Provinznest. Üble Hinterweltler mit einer Sprache, die niemand versteht, sich mit Waid bemalen und unzivilisierten Bräuchen und Göttern anhängen. Alle paar Generationen wehren sie sich wieder gegen die Herrschaft durch Alber. Es wird viel Blut vergossen und je nach Ausgang werden einige Grenzen etwas verschoben, die Tributzahlungen werden erhöht oder gesenkt und einige Clanführer erhalten einige Sonderrechte oder verlieren sie wieder an Albers Adelige
+	
+	\subsection{Alber}
+	Herrscher: Bartholomeus II, King of Alber, Supreme Ruler of the Empire
+	Staatskirche: Kirche von Alber
+	
+	\subsection{Institutionen} The Arrows of Light (weissmagischer Orden, der Schwarzmagier und Nichtlizensierte jagt)
+	
+	
+	
+	
+	
+	%Albyrion
+	\subsection{Albyrion}
+	Die Hauptstadt von Alber.
+\end{multicols}
+
+
+
+
+
+
+%ZETARA
+
+%\chapter{Nyzrathi, Zetara und die Freistaaten}
+
+%
+%\newpage \section{Zetara}
+%\begin{multicols}{2}
+%	
+%	\subsection{Confederatio Urbium Liberarum Zetarum}
+%
+%
+%	
+%	
+%	\subsection{Institutionen}
+%	\paragraph{Schmieden von Zetara}
+%	
+%\end{multicols}
+
+
+
+
+\appendix
+\chapter{Bemerkungen zum Design}
+\subsection{Religion}
+Im Gegensatz zu D\&D oder DSA möchte ich keine 'offizielle' oder bevorzugte Kosmologie, sondern mehrere gleichberechtigte. Wer mehr zu den Religionen des Südkontinents erfinden will, soll sich doch von der Wikipediaseite 'Afrikanische Kosmogonie' inspirieren lassen.
+
+Dem aufmerksamen Leser werden die Inspirationsquellen für die Religionen Silvas sicher nicht entgehen:
+\begin{itemize}
+	\item \textbf{Heiliger Geist} Christentum
+	\item \textbf{Kabb'l} kabbalistisches Judentum
+	\item \textbf{Ougdou} Voodoo
+	\item \textbf{Otepa} Yoruba (Afrikanisches Volk)
+\end{itemize}
+
+\subsection{Scheusale von der anderen Seite}
+Ein bisschen Lovecraftschen Horror hat noch keinem Fantasy-Setting geschadet.
+
+\subsubsection{Feenwesen}
+Man denke an Oberon und Titania, an die Kobolde Puck und Pumuckl, nicht an die doofen Elfen von Tolkien.
+
+%==================================================================================================
+%==================================================================================================
+%==================================================================================================
+\end{document}
