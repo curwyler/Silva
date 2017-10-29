@@ -1,0 +1,142 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {}Einführung}{3}
+\contentsline {subsubsection}{Knotenpunkte der Macht}{3}
+\contentsline {subsubsection}{Katastrophe von Menschenhand}{3}
+\contentsline {subsubsection}{Reichtum \& Armut}{3}
+\contentsline {subsubsection}{Verrückte Forscher}{3}
+\contentsline {subsubsection}{Wo bleibt Gott?}{3}
+\contentsline {section}{\numberline {}Geschichtsüberblick}{4}
+\contentsline {subsubsection}{Die Magierkriege}{4}
+\contentsline {subsubsection}{Restauration und Waldwachstum}{4}
+\contentsline {subsubsection}{Entdeckung der Kolonien und Schisma der Kirche}{4}
+\contentsline {subsubsection}{Jüngste Vergangenheit}{4}
+\contentsline {section}{\numberline {}Geographie}{4}
+\contentsline {chapter}{\numberline {}Mittelreiche}{7}
+\contentsline {section}{\numberline {}Gesellschaft}{7}
+\contentsline {subsection}{\numberline {}Oberschicht}{7}
+\contentsline {subsubsection}{Magier als Machtmittel}{7}
+\contentsline {subsection}{\numberline {}Mittelschicht}{7}
+\contentsline {subsubsection}{Alchemisten und Arkantechnicker}{8}
+\contentsline {paragraph}{Magistri Hortulani}{8}
+\contentsline {subsubsection}{Handelsconsortien und -compagnien}{8}
+\contentsline {subsection}{\numberline {}Unterschicht}{8}
+\contentsline {subsubsection}{Söldner, Kopfgeldjäger und Freibeuter}{8}
+\contentsline {paragraph}{Gruppierungen}{9}
+\contentsline {section}{\numberline {}Tiefwald}{9}
+\contentsline {subsubsection}{Imperator Arminius und sein Gefolge}{9}
+\contentsline {subsubsection}{Die Kirche}{9}
+\contentsline {subsubsection}{Rat der Adelshäuser}{9}
+\contentsline {paragraph}{Königlicher Geheimrat}{9}
+\contentsline {subsubsection}{Die Institutionen Tiefwalds}{9}
+\contentsline {paragraph}{Akademie für Alchemie und Technick}{9}
+\contentsline {paragraph}{Komissariat für Magische Verbrechen}{9}
+\contentsline {paragraph}{Königliche Waldläufer}{10}
+\contentsline {paragraph}{Magiergilden}{10}
+\contentsline {paragraph}{Spitzelnetzwerk}{10}
+\contentsline {subsection}{\numberline {}Serebryany Bor (Protektorat)}{10}
+\contentsline {subsection}{\numberline {}Tiefwald-Stadt}{10}
+\contentsline {subsubsection}{Stadtrat Tiefwald-Stadt}{10}
+\contentsline {subsubsection}{Die Burgstadt}{10}
+\contentsline {paragraph}{Festung Nydegg}{10}
+\contentsline {paragraph}{Königshof}{10}
+\contentsline {paragraph}{Zytglogge}{11}
+\contentsline {subsubsection}{Mittelstadt}{11}
+\contentsline {paragraph}{Käfigturm}{11}
+\contentsline {subsection}{\numberline {}Karlsbruck}{11}
+\contentsline {section}{\numberline {}Alber}{11}
+\contentsline {paragraph}{Herrscher}{11}
+\contentsline {paragraph}{Staatskirche}{11}
+\contentsline {subsection}{\numberline {}Caergoch (Protektorat)}{11}
+\contentsline {subsubsection}{Institutionen}{11}
+\contentsline {paragraph}{Arrows of Light}{11}
+\contentsline {subsection}{\numberline {}Albyrion}{11}
+\contentsline {chapter}{\numberline {}Nyzrathi, Zetara und die Freistaaten}{13}
+\contentsline {section}{\numberline {}Republik Nyzrathi}{13}
+\contentsline {subsubsection}{Rat der Weisen Frauen (Hexenrat)}{13}
+\contentsline {subsubsection}{Doge und die Adelshäuser}{13}
+\contentsline {subsection}{\numberline {}Stadt Nyzrathi}{14}
+\contentsline {subsubsection}{Distrikte von Nyzrathi}{14}
+\contentsline {subsubsection}{Wichtige Bevölkerungsgruppen}{14}
+\contentsline {paragraph}{Die Kabb'ler}{14}
+\contentsline {paragraph}{Ougdou}{14}
+\contentsline {paragraph}{Ausländer}{14}
+\contentsline {chapter}{\numberline {}Kosmologie \& Religion}{15}
+\contentsline {section}{\numberline {}Religionen}{15}
+\contentsline {subsection}{\numberline {}Der Heilige Geist}{15}
+\contentsline {subsubsection}{Thaumaturgie \& Magie}{15}
+\contentsline {subsubsection}{Pilgerwege und die Weihe}{15}
+\contentsline {subsubsection}{Die Kirchen}{16}
+\contentsline {paragraph}{Kirchliche Institutionen}{16}
+\contentsline {subsection}{\numberline {}Ketzerei und Kulte}{16}
+\contentsline {subsubsection}{Feilscher, Henker, Rabenvater}{16}
+\contentsline {subsubsection}{Sternenkulte}{17}
+\contentsline {paragraph}{Armageddon}{17}
+\contentsline {paragraph}{Polarstern}{17}
+\contentsline {paragraph}{Phrax}{17}
+\contentsline {paragraph}{Thanatloc}{17}
+\contentsline {subsection}{\numberline {}Kabb'l}{17}
+\contentsline {subsubsection}{Kultur}{17}
+\contentsline {subsection}{\numberline {}Ougdou}{17}
+\contentsline {subsubsection}{Der Unterschied zwischen Thaumaturgie und Zauberei}{18}
+\contentsline {subsubsection}{Moralische Gebote}{18}
+\contentsline {chapter}{\numberline {}Magie}{19}
+\contentsline {section}{\numberline {}Gefahren der Magie}{19}
+\contentsline {subsection}{\numberline {}Mangelnde Kontrolle}{19}
+\contentsline {section}{\numberline {}Der Einfluss der Sterne}{19}
+\contentsline {section}{\numberline {}Die Fäule}{19}
+\contentsline {subsection}{\numberline {}Moderseuche}{20}
+\contentsline {subsection}{\numberline {}Vampirismus}{20}
+\contentsline {subsection}{\numberline {}Lykanthropie}{20}
+\contentsline {section}{\numberline {}Stätten der Macht}{20}
+\contentsline {subsubsection}{Waldherzen}{20}
+\contentsline {subsubsection}{Feentore}{21}
+\contentsline {subsubsection}{Moderlande}{21}
+\contentsline {subsubsection}{Chaosspalten}{21}
+\contentsline {section}{\numberline {}Alchemie}{21}
+\contentsline {subsubsection}{Beispiele alchemischer Stoffe}{21}
+\contentsline {subsubsection}{Metalle und Magie}{22}
+\contentsline {section}{\numberline {}Machinarium}{22}
+\contentsline {subsection}{\numberline {}Golem}{22}
+\contentsline {chapter}{\numberline {}Bestiarium}{23}
+\contentsline {section}{\numberline {}Bestien}{23}
+\contentsline {subsection}{\numberline {}Reissmäuler}{23}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{23}
+\contentsline {paragraph}{Varianten}{23}
+\contentsline {paragraph}{Kampfverhalten}{23}
+\contentsline {subsection}{\numberline {}Riesentiere}{23}
+\contentsline {paragraph}{Elche \& Hirsche}{23}
+\contentsline {paragraph}{Wölfe \& Bären}{23}
+\contentsline {paragraph}{Ratten \& Spinnen}{23}
+\contentsline {subsection}{\numberline {}Chimären}{23}
+\contentsline {section}{\numberline {}D\ae monen}{23}
+\contentsline {paragraph}{Manifestierte D\ae monen}{24}
+\contentsline {section}{\numberline {}Feenwesen}{24}
+\contentsline {subsection}{\numberline {}Dryaden \& Nymphen}{24}
+\contentsline {subsection}{\numberline {}Kobolde \& Elben}{24}
+\contentsline {paragraph}{Wilde Jagd}{24}
+\contentsline {section}{\numberline {}Kulturschaffende Rassen}{24}
+\contentsline {subsection}{\numberline {}Tiermenschen}{25}
+\contentsline {paragraph}{Herkunft}{25}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{25}
+\contentsline {paragraph}{Kampfverhalten}{25}
+\contentsline {subsection}{\numberline {}Gnome}{25}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{25}
+\contentsline {paragraph}{Kultur}{25}
+\contentsline {paragraph}{Religion}{26}
+\contentsline {paragraph}{Gnomenälteste}{26}
+\contentsline {paragraph}{Zeitrechnung}{26}
+\contentsline {subsection}{\numberline {}Oger}{26}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{26}
+\contentsline {paragraph}{Mutationen}{26}
+\contentsline {paragraph}{Kampfverhalten}{26}
+\contentsline {subsection}{\numberline {}Schrate}{26}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{26}
+\contentsline {paragraph}{Kultur}{27}
+\contentsline {section}{\numberline {}Scheusale aus der Leere}{27}
+\contentsline {section}{\numberline {}Trolle}{27}
+\contentsline {section}{\numberline {}Wichte}{28}
+\contentsline {paragraph}{Erscheinung \& Verhalten}{28}
+\contentsline {subsection}{\numberline {}Fürchtewicht}{28}
+\contentsline {subsection}{\numberline {}Nachtschwärmer}{28}
+\contentsline {subsection}{\numberline {}Pustelwicht}{28}
+\contentsline {subsection}{\numberline {}Tintenwicht}{28}
