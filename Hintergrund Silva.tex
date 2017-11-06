@@ -1,25 +1,30 @@
 % !TeX program = xelatex
 \documentclass[12pt,twoside,twocolumn,openany]{book}
-\usepackage{silva} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage{silva} % läuft nur mit xelatex
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
 \usepackage{csvsimple}
 \usepackage{tabularx}
-
+\usepackage{hyperref}
+\usepackage[left=1.5cm,bottom = 3.5cm, twoside]{geometry}
 % Font magic (XeLatex only) 
 
 \title{\chapterfamily Die Chroniken von Silva}
 \author{\chapterfamily Cedar Urwyler}
 \date{\today}
 
+\clubpenalty10000
+\widowpenalty10000
 
 \begin{document}
 \maketitle
 \tableofcontents
 
 \chapter{Einführung}
+\subsubsection{Knotenpunkte der Macht} Die Welt von Silva ist geprägt von Stätten der Macht, Punkten, wo sich unerklärliche Mächte ballen. Manche dieser Stätten sind idyllische Plätze, wo Mensch und Natur friedlich zusammenleben, manche sind verdorbene Orte, wo Chaos und Fäulnis aus der gespaltenen Erdoberfläche fliessen wie Eiter aus einer Wunde. Unergründliche Geschöpfe, die in ihrer Form und Wesen nicht von Menschen erfassbar sind, leben in diesen Orten; Tierherrscher, Halbgötter und legendäre Kreaturen, die kaum je ein Mensch zu Gesicht bekommen hat. Das unkontrollierte Wachstum und die Monster, welche den Stätten der Macht entspringen, führen dazu, dass der Wald auf Silva ein allesfressender Leviathan ist.
+
 \subsubsection{Knotenpunkte der Macht} Die Welt von Silva ist geprägt von Stätten der Macht, Punkten, wo sich unerklärliche Mächte ballen. Manche dieser Stätten sind idyllische Plätze, wo Mensch und Natur friedlich zusammenleben, manche sind verdorbene Orte, wo Chaos und Fäulnis aus der gespaltenen Erdoberfläche fliessen wie Eiter aus einer Wunde. Unergründliche Geschöpfe, die in ihrer Form und Wesen nicht von Menschen erfassbar sind, leben in diesen Orten; Tierherrscher, Halbgötter und legendäre Kreaturen, die kaum je ein Mensch zu Gesicht bekommen hat. Das unkontrollierte Wachstum und die Monster, welche den Stätten der Macht entspringen, führen dazu, dass der Wald auf Silva ein allesfressender Leviathan ist.
 	
 %Umweltverschmutzung, Klimakatastrophe, Krieg und Gewalt
@@ -39,18 +44,20 @@ Abgesehen von der althergebrachten Forschung der Gilden und Adelshöfen wird in 
 Zwar sagen die Priester und Kirchen der grossen Imperien, dass es einen Gott gebe, der ihnen ihre Visionen und mystischen Kräfte schenkt, aber gesehen hat ihn noch niemand. Auch verehrt man in anderen Teilen der Welt einen anderen Gott (oder gar mehrere) und sogar heidnische Mystiker und Ketzer scheinen in seltenen Fällen die gleichen Wunder zu wirken, wie die frömmsten Priester.
 
 \begin{table}[h]
-	\begin{commentbox}{Lektüreliste}
-		Einige Literaturempfehlungen, die Silva beeinflusst haben:
+	\begin{commentbox}{Inspirationsquellen}
+		Einige Bücher und Spiele, die Silva beeinflusst haben:
 		\begin{itemize}
 			\item Die \emph{Edgeland Chronicles} von Paul Stewart und Chris Riddell
 			\item \emph{The Age of Unreason} von Greg Keyes
 			\item \emph{A Midsummer Nights Dream} von William Sheakespeare
+			\item \emph{Darkest Dungeon}
+			\item  Das \emph{Warhammer Fantasy}-Universum
 		\end{itemize}
 	\end{commentbox}
 \end{table}
 
 
-\newpage
+%\newpage
 \section{Geschichtsüberblick}
 	
 \subsubsection{Die Magierkriege}
@@ -83,7 +90,7 @@ Zwar sagen die Priester und Kirchen der grossen Imperien, dass es einen Gott geb
 	\end{description}
 
 
-
+%\newpage
 \section{Geographie}
 Die Welt ist nur unregelmässig erforscht. Wo auch immer sich viele Menschen niedergelassen haben, sind grössere Räume von Wissbegierigen untersucht worden, Flora und Fauna klassifiziert, magische Apparaturen, von denen niemand ausser einigen wenigen Arkanisten wusste, wozu sie dienten, wurden aufgestellt, weil sie hübsch surrten. Die gewonnenen Messdaten sind oftmals ungenau oder zu spärlich, um sich damit auseinander zu setzen. Weshalb sollte ein begabter Magier sich von den Schrecken der Wildnis umbringen lassen, wenn er stattdessen am Hofe eines Adeligen oder im Klerus einer verantwortungsvollen, gut bezahlten Anstellung nachkommen kann?
 Nur verrückten Wissenschaftlern und Abenteurern ist es zu verdanken, das vereinzelte - meist falsche - grossräumige Karten und Enzyklopädien über unerforschte Gebiete entstanden sind.
@@ -98,9 +105,7 @@ Niemand weiss wirklich, wie das Terrain unter dem undurchdringlichen Dach aus Bl
 
 Unter der Oberfläche von Silva existieren gewaltige Hohlräume in denen es von seltsamem Leben tummelt. Dieses verworrene System von Fluren, Schächten und Kavernen wird gemeinhin das \emph{Unterreich} genannt. Pilzwälder und leuchtende Moose dominieren die Vegetation und tauchen alles in fahles Licht. Die Tiefengnome leben bevorzugt in diesen Gegenden und fördern die Schätze des Erdreichs.
 
-
-
-\chapter{Mittelreiche}
+\chapter{Die Mittelreiche}
 
 \section{Gesellschaft}
 Die Mittelreiche (Crédune, Alber, Norge, Tiefwald, Tosco, Berisa) werden von absolutistischen Monarchen beherrscht, welche sich ihrerseits stets des Rückhalts der mächtigen Adelsräte und Familien versichern müssen. Die Provinzen Caergoch und Serebryani Bor sowie die Kolonien Übersee sind Protektorate der Mittelreiche und sind stark von deren Gesellschaftsstruktur geprägt. 
@@ -260,74 +265,60 @@ Eine grosse Stadt im Osten von Tiefwald. Der Fluss Siebenlauf teilt die Stadt en
 
 
 
-%ALBER
-\section{Alber}
-\paragraph{Herrscher} Bartholomeus II, King of Alber, Supreme Ruler of the Empire
-\paragraph{Staatskirche} Kirche von Alber
-\subsection{Caergoch (Protektorat)}
-Ein Provinznest bewohnt von Hinterweltlern mit einer Sprache, die niemand versteht und die sich mit Waid bemalen und unzivilisierten Bräuchen und Göttern anhängen. Alle paar Generationen wehren sie sich wieder gegen die Herrschaft durch Alber. Es wird viel Blut vergossen und je nach Ausgang werden einige Grenzen etwas verschoben, die Tributzahlungen werden erhöht oder gesenkt und einige Clanführer erhalten einige Sonderrechte oder verlieren sie wieder an Albers Adelige.
+%%ALBER
+%\section{Alber}
+%\paragraph{Herrscher} Bartholomeus II, King of Alber, Supreme Ruler of the Empire
+%\paragraph{Staatskirche} Kirche von Alber
+%\subsection{Caergoch (Protektorat)}
+%Ein Provinznest bewohnt von Hinterweltlern mit einer Sprache, die niemand versteht und die sich mit Waid bemalen und unzivilisierten Bräuchen und Göttern anhängen. Alle paar Generationen wehren sie sich wieder gegen die Herrschaft durch Alber. Es wird viel Blut vergossen und je nach Ausgang werden einige Grenzen etwas verschoben, die Tributzahlungen werden erhöht oder gesenkt und einige Clanführer erhalten einige Sonderrechte oder verlieren sie wieder an Albers Adelige.
+%
+%\subsubsection{Institutionen}
+%\paragraph{Arrows of Light} Ein weissmagischer Orden, der Schwarzmagier und Nichtlizensierte jagt. Der Orden grenzt sich stark von der Kirche ab.
+%
+%%ALBYRION
+%\subsection{Albyrion}
+%Die Hauptstadt von Alber.
 
-\subsubsection{Institutionen}
-\paragraph{Arrows of Light} Ein weissmagischer Orden, der Schwarzmagier und Nichtlizensierte jagt. Der Orden grenzt sich stark von der Kirche ab.
 
-%ALBYRION
-\subsection{Albyrion}
-Die Hauptstadt von Alber.
-
-\begin{table*}
-	\centering
-	\begin{tabular}{l}
-		\hline
-	\end{tabular}
-	\begin{tabularx}{\textwidth}{cXcXcX}%
-		\bfseries W100  & \bfseries Männername & \bfseries W100  & \bfseries Männername & \bfseries W100 & \bfseries Frauenname\\ 
-		&&&&&\\
-		\csvreader[head to column names]{bilder/Vornamen_m.csv}{}{\W & \Mann &\w& \mann & \ww & \frau\\}
-	\end{tabularx}
-	{Häufigste Namen 1411 bis 1497, zusammengestellt von beliebte-vornamen.de}
-	\begin{tabular}{l}
-		\hline
-	\end{tabular}
-\end{table*}
-
-\chapter{Nyzrathi, Zetara und die Freistaaten}
-Nur wenige Landstriche und Städte im Okzident vermögen sich dem Zugriff der grossen Monarchien zu entziehen. Zu nennen sind hier der Stadtstaat Nyzrathi, der Städtebund Zetara und die von Piraten beherrschten Freistaaten zwischen der Ademola und dem Beris-Meer.
-
-\section{Republik Nyzrathi}
-Die Stadt Nyzrathi ist eine handelstechnisch günstig im Nyzdelta gelegene Metropole. Nyzrathi ist wahrscheinlich die vielfältigste und offenste Stadt der Welt. Als Drehpunkt des Fernhandels in alle Richtungen, hat Nyzrathi einen gewaltigen Reichtum erworben und dank seines aussergewöhnlichen Regierungssystems kam dieser Reichtum einer breiteren Schicht zugute als dies anderswo der Fall wäre.
-
-Das Herrschaftsgebiet der Republik Nyzrathi erstreckt sich über einige benachbarte Städte, die unter der Herrschaft des Dogen und des Stadtrats von Nyzrathi stehen sowie einige weitere Städte, die auf dem Papier unabhängig sind, aber von Marionetten des Hexen-Rates regiert werden. Dieses beachtliche Gebiet grenzt im Norden an Tosco und den Städtebund Zetara, im Süden an die Wälder von Otepa und im Westen an die Freistaaten und die Wüste Ademola.
-
-Jede Religion des Okzidents hat im Laufe der Jahrhunderte in Nyzrathi eine Heimat gefunden. Der Heilige Geist, die alten Götter und die Naturgeister werden alle angebetet und es finden sich entsprechende Tempel in der ganzen Stadt. Meist werden die Texte liberaler ausgelegt, als das in den Herkunftsländern der Fall ist und wenn beispielsweise der Bischof von Nyzrathi zu einer Konferenz in Berisa reist, wird man seine Ansichten dort als extrem ansehen.
-
-Die Politik in Nyzrathi ist das verworrenste Netz von Beziehungen, Fehden, Interessengruppierungen, Räten und Bestechung, das je von Menschen geschaffen werden kann.
-
-\subsubsection{Rat der Weisen Frauen (Hexenrat)} Der Hexenrat ist die Antwort auf die Herausforderung, einen Stadtstaat zu regieren, der eine unüberschaubare Zahl von Ethnien, Religionen und Interessensgruppen beherbergt. Die Weisen Frauen sind Vertreterinnen dieser Gruppen - Priesterinnen, Adelige, Kräuterfrauen, Kapitäninnen und zaubermächtige Hexen. Durch ein komplexes Netz zwischenmenschlicher Beziehungen nehmen die Weisen Frauen Einfluss auf jeder Ebene der Gemeinschaft. Sie gelten als unbestechlich und gerecht, wenn auch manchmal hart.
-
-Der Hexenrat verfügt Gesetze für die Stadt und Republik Nyzrathi (eine Bezeichnung, welche die zugewandten Orte einschliesst) und ernennt Statthalter, Hauptmänner der Wache und Richter.
-\begin{itemize}
-	\item\textit{Nesmeralda} Niemand weiss, wie alt Nesmaralda ist. Andere Hexen sagen, dass Nesmeralda schon graue Haare hatte, als sie dem Rat vor zwanzig Jahren beitraten. Und während sie selbst graue Haare bekamen, schien Nesmeralda kein bisschen an Kraft zu verlieren. Man sagt, dass sie mächtige Zauberei beherrsche und nicht altere, dass sie vor langer Zeit barfuss aus dem fernen Serebryany Bor nach Nyzrathi kam und den Aufstieg der Hexen in Gang setzte. Fest steht, dass sie die grösste Fraktion im Hexenrat führt und ihr Wort ein Gewicht hat, dass man sonst nur den mächtigsten Fürsten der Welt beimessen würde.
-\end{itemize}
-
-\subsubsection{Doge und die Adelshäuser} Der Doge regierte ursprünglich als König über Nyzrathi, aber die Position hat im Laufe der letzten 150 Jahre massiv an Einfluss verloren und heute hat der Doge kaum mehr Einfluss auf die Gesetzgebung. Nur wenn seine Unterschrift vonnöten ist oder ein veraltetes Gesetz Anwendung findet, gelingt es dem Dogen, dem Hexenrat Widerstand zu bieten. Zudem kann er als oberster Richter Einfluss nehmen und er hat die Befugnis einige Steuern festzusetzen und einzutreiben. Zudem verfügen die Familie des Dogen sowie die verbündeten Häuser eine beachtliche Privatarmeen.
-
-\begin{itemize}
-	\item\textit{Der Doge Carlos lo Aziz} ist unfähig und hat es nur seiner Mutter und seinen Kindern zu verdanken, das die Familie Lo Aziz noch einen Teil der Macht hat.
-	\item\textit{Angelo lo Aziz}, der Sohn des Dogen, ist ungebrochen populär bei vielen Bevölkerungsgruppen wie z.B. den konservativen, frauenfeindlichen Kabb'lern und Priestern, den älteren Adelsgeschlechtern und den Monarchisten im Volk.
-	\item\textit{Catharina lo Aziz}, die wunderschöne Schwester von Angelo, ist eine begabte Magierin und bereitet sich vor, den Sitz ihrer Grossmutter im Hexenrat zu übernehmen.
-	\item\textit{Magaly lo Bairdyz},  die Mutter des Dogen,  vertritt die Familie im Hexenrat. obwohl ihr der grösste Teil der Weisen Frauen ablehnend gegenübersteht, kann sie durch ihre raffinierten Schachzüge trotzdem etwas erreichen.
-\end{itemize}
-
-\subsection{Stadt Nyzrathi}
-\subsubsection{Distrikte von Nyzrathi} Die verschiedenen Distrikte der Stadt dürfen sich innerhalb von bestimmten Grenzen selbst organisieren, solang die übergeordneten Gesetze eingehaltet werden. Zwischen den Distrikten herrscht ein (meist freundlicher) Wettbewerb. Die grösseren Distrikte wie der Universitätsdistrikt, Markt und Hafen sind sehr multikulturell und werden oft von wirtschaftlichen Interessen der Gilden und Zünfte beherrscht. Die Gilden und Zünfte schicken ihre Vertreter(-innen) sowohl zum Dogen wie auch in den Rat der Hexen. Eine Magiergilde wie in den Mittelreichen gibt es nicht, da Nyzrathi keine Lizenzpflicht für Magiekundige kennt. Stattdessen schliessen sich Zauberwirker anderen Gilden oder Zünften an oder schliessen sich zu Schulen zusammen. Jeder Stadtteil hat ihre eigenen Gilden, die sich wiederum einer Dachorganisation anschliessen.
-
-\subsubsection{Wichtige Bevölkerungsgruppen}
-\paragraph{Die Kabb'ler} In Nyzrathi lebt die grösste Gemeinschaft von Kabb'ler der Welt. Viele berühmte Kabb'ler lehren an den Schulen und der Universität und auch in den Gilden finden sich einflussreiche Kabb'ler - alles Positionen, die ihnen aufgrund von religiösen Vorurteilen in anderen Ländern oft verwehrt sind. Die Kabb'ler sind jedoch alles eine einheitliche Gruppe. Konservative Kabb'ler empfinden den Hexenrat und das damit einhergehende Matriarchat als gotteslästerlich und versuchen die Position des Dogen zu stärken, gleichzeitig sind einige Maharati (die weiblichen Priesterinnen) sowie Magierinnen und Ärztinnen  Mitglied in ebendiesem Gremium. Konflikte zwischen Gruppen in Nyzrathi sind oft davon geprägt, dass die verschiedenen Gruppen unterschiedlichen Ethnien angehören. Kabb'ler stellen hier eine Ausnahme dar, da sie Konflikte mit anderen Kabb'lern viel verbissener und kleinlicher führen, als mit irgendwem sonst.
-
-\paragraph{Ougdou} Wie die Stadt Nyzrathi selbst ein Gemisch verschiedener Menschen ist, ist Ougdou ein Amalgam verschiedener Religionen. Die meisten Menschen in Nyzrathi folgen dieser Lehre und entsprechend ist ihr Einfluss auf das Erscheinen und den Alltag der Stadt sehr gross. In den Gassen riecht es nach den Gewürzopfern, die Gläubige den Loas darbringen. An Türen hängen rituelle Schutzsymbole. An Feiertagen sind die Strassen voller Tanzenden. Tiere werden geopfert und die Mambos sprechen in Zungen.
-
-\paragraph{Ausländer} Viele Mittelländer leben in Nyzrathi und leben dort getreu den lehren des Heiligen Geistes. Nyzrathi verfügt über einen eigenen Bischof, der allerdings in den Kreisen der Kirche in Berisa und Tosco nur unwillig geduldet wird. Aus den Königreichen des Südens kommen mit wertvollen Gütern auch viele Menschen nach Nyzrathi.
-
+%%NYZRATHI
+%\chapter{Nyzrathi, Zetara \& Freistaaten}
+%Nur wenige Landstriche und Städte im Okzident vermögen sich dem Zugriff der grossen Monarchien zu entziehen. Zu nennen sind hier der Stadtstaat Nyzrathi, der Städtebund Zetara und die von Piraten beherrschten Freistaaten zwischen der Ademola und dem Beris-Meer.
+%
+%\section{Republik Nyzrathi}
+%Die Stadt Nyzrathi ist eine handelstechnisch günstig im Nyzdelta gelegene Metropole. Nyzrathi ist wahrscheinlich die vielfältigste und offenste Stadt der Welt. Als Drehpunkt des Fernhandels in alle Richtungen, hat Nyzrathi einen gewaltigen Reichtum erworben und dank seines aussergewöhnlichen Regierungssystems kam dieser Reichtum einer breiteren Schicht zugute als dies anderswo der Fall wäre.
+%
+%Das Herrschaftsgebiet der Republik Nyzrathi erstreckt sich über einige benachbarte Städte, die unter der Herrschaft des Dogen und des Stadtrats von Nyzrathi stehen sowie einige weitere Städte, die auf dem Papier unabhängig sind, aber von Marionetten des Hexen-Rates regiert werden. Dieses beachtliche Gebiet grenzt im Norden an Tosco und den Städtebund Zetara, im Süden an die Wälder von Otepa und im Westen an die Freistaaten und die Wüste Ademola.
+%
+%Jede Religion des Okzidents hat im Laufe der Jahrhunderte in Nyzrathi eine Heimat gefunden. Der Heilige Geist, die alten Götter und die Naturgeister werden alle angebetet und es finden sich entsprechende Tempel in der ganzen Stadt. Meist werden die Texte liberaler ausgelegt, als das in den Herkunftsländern der Fall ist und wenn beispielsweise der Bischof von Nyzrathi zu einer Konferenz in Berisa reist, wird man seine Ansichten dort als extrem ansehen.
+%
+%Die Politik in Nyzrathi ist das verworrenste Netz von Beziehungen, Fehden, Interessengruppierungen, Räten und Bestechung, das je von Menschen geschaffen werden kann.
+%
+%\subsubsection{Rat der Weisen Frauen (Hexenrat)} Der Hexenrat ist die Antwort auf die Herausforderung, einen Stadtstaat zu regieren, der eine unüberschaubare Zahl von Ethnien, Religionen und Interessensgruppen beherbergt. Die Weisen Frauen sind Vertreterinnen dieser Gruppen - Priesterinnen, Adelige, Kräuterfrauen, Kapitäninnen und zaubermächtige Hexen. Durch ein komplexes Netz zwischenmenschlicher Beziehungen nehmen die Weisen Frauen Einfluss auf jeder Ebene der Gemeinschaft. Sie gelten als unbestechlich und gerecht, wenn auch manchmal hart.
+%
+%Der Hexenrat verfügt Gesetze für die Stadt und Republik Nyzrathi (eine Bezeichnung, welche die zugewandten Orte einschliesst) und ernennt Statthalter, Hauptmänner der Wache und Richter.
+%\begin{itemize}
+%	\item\textit{Nesmeralda} Niemand weiss, wie alt Nesmaralda ist. Andere Hexen sagen, dass Nesmeralda schon graue Haare hatte, als sie dem Rat vor zwanzig Jahren beitraten. Und während sie selbst graue Haare bekamen, schien Nesmeralda kein bisschen an Kraft zu verlieren. Man sagt, dass sie mächtige Zauberei beherrsche und nicht altere, dass sie vor langer Zeit barfuss aus dem fernen Serebryany Bor nach Nyzrathi kam und den Aufstieg der Hexen in Gang setzte. Fest steht, dass sie die grösste Fraktion im Hexenrat führt und ihr Wort ein Gewicht hat, dass man sonst nur den mächtigsten Fürsten der Welt beimessen würde.
+%\end{itemize}
+%
+%\subsubsection{Doge und die Adelshäuser} Der Doge regierte ursprünglich als König über Nyzrathi, aber die Position hat im Laufe der letzten 150 Jahre massiv an Einfluss verloren und heute hat der Doge kaum mehr Einfluss auf die Gesetzgebung. Nur wenn seine Unterschrift vonnöten ist oder ein veraltetes Gesetz Anwendung findet, gelingt es dem Dogen, dem Hexenrat Widerstand zu bieten. Zudem kann er als oberster Richter Einfluss nehmen und er hat die Befugnis einige Steuern festzusetzen und einzutreiben. Zudem verfügen die Familie des Dogen sowie die verbündeten Häuser eine beachtliche Privatarmeen.
+%
+%\begin{itemize}
+%	\item\textit{Der Doge Carlos lo Aziz} ist unfähig und hat es nur seiner Mutter und seinen Kindern zu verdanken, das die Familie Lo Aziz noch einen Teil der Macht hat.
+%	\item\textit{Angelo lo Aziz}, der Sohn des Dogen, ist ungebrochen populär bei vielen Bevölkerungsgruppen wie z.B. den konservativen, frauenfeindlichen Kabb'lern und Priestern, den älteren Adelsgeschlechtern und den Monarchisten im Volk.
+%	\item\textit{Catharina lo Aziz}, die wunderschöne Schwester von Angelo, ist eine begabte Magierin und bereitet sich vor, den Sitz ihrer Grossmutter im Hexenrat zu übernehmen.
+%	\item\textit{Magaly lo Bairdyz},  die Mutter des Dogen,  vertritt die Familie im Hexenrat. obwohl ihr der grösste Teil der Weisen Frauen ablehnend gegenübersteht, kann sie durch ihre raffinierten Schachzüge trotzdem etwas erreichen.
+%\end{itemize}
+%
+%\subsection{Stadt Nyzrathi}
+%\subsubsection{Distrikte von Nyzrathi} Die verschiedenen Distrikte der Stadt dürfen sich innerhalb von bestimmten Grenzen selbst organisieren, solang die übergeordneten Gesetze eingehaltet werden. Zwischen den Distrikten herrscht ein (meist freundlicher) Wettbewerb. Die grösseren Distrikte wie der Universitätsdistrikt, Markt und Hafen sind sehr multikulturell und werden oft von wirtschaftlichen Interessen der Gilden und Zünfte beherrscht. Die Gilden und Zünfte schicken ihre Vertreter(-innen) sowohl zum Dogen wie auch in den Rat der Hexen. Eine Magiergilde wie in den Mittelreichen gibt es nicht, da Nyzrathi keine Lizenzpflicht für Magiekundige kennt. Stattdessen schliessen sich Zauberwirker anderen Gilden oder Zünften an oder schliessen sich zu Schulen zusammen. Jeder Stadtteil hat ihre eigenen Gilden, die sich wiederum einer Dachorganisation anschliessen.
+%
+%\subsubsection{Wichtige Bevölkerungsgruppen}
+%\paragraph{Die Kabb'ler} In Nyzrathi lebt die grösste Gemeinschaft von Kabb'ler der Welt. Viele berühmte Kabb'ler lehren an den Schulen und der Universität und auch in den Gilden finden sich einflussreiche Kabb'ler - alles Positionen, die ihnen aufgrund von religiösen Vorurteilen in anderen Ländern oft verwehrt sind. Die Kabb'ler sind jedoch alles eine einheitliche Gruppe. Konservative Kabb'ler empfinden den Hexenrat und das damit einhergehende Matriarchat als gotteslästerlich und versuchen die Position des Dogen zu stärken, gleichzeitig sind einige Maharati (die weiblichen Priesterinnen) sowie Magierinnen und Ärztinnen  Mitglied in ebendiesem Gremium. Konflikte zwischen Gruppen in Nyzrathi sind oft davon geprägt, dass die verschiedenen Gruppen unterschiedlichen Ethnien angehören. Kabb'ler stellen hier eine Ausnahme dar, da sie Konflikte mit anderen Kabb'lern viel verbissener und kleinlicher führen, als mit irgendwem sonst.
+%
+%\paragraph{Ougdou} Wie die Stadt Nyzrathi selbst ein Gemisch verschiedener Menschen ist, ist Ougdou ein Amalgam verschiedener Religionen. Die meisten Menschen in Nyzrathi folgen dieser Lehre und entsprechend ist ihr Einfluss auf das Erscheinen und den Alltag der Stadt sehr gross. In den Gassen riecht es nach den Gewürzopfern, die Gläubige den Loas darbringen. An Türen hängen rituelle Schutzsymbole. An Feiertagen sind die Strassen voller Tanzenden. Tiere werden geopfert und die Mambos sprechen in Zungen.
+%
+%\paragraph{Ausländer} Viele Mittelländer leben in Nyzrathi und leben dort getreu den lehren des Heiligen Geistes. Nyzrathi verfügt über einen eigenen Bischof, der allerdings in den Kreisen der Kirche in Berisa und Tosco nur unwillig geduldet wird. Aus den Königreichen des Südens kommen mit wertvollen Gütern auch viele Menschen nach Nyzrathi.
+%
 %\subsection{Zugewandte Orte}
 %Die Städte, die sich der Herrschaft des Dogen und des Hexenrates in unterschiedlichem Masse unterworfen haben, werden die zugewandten Orte genannt.
 
@@ -483,7 +474,6 @@ Besonders wichtig sind Grosszügigkeit und Toleranz gegenüber anderen. Ougdou a
 
 
 \chapter{Magie}
-
 Mithilfe von Zaubern, mystischen Kräften und der Willenskraft lässt sich das Gefüge der Realiät direkt verändern. Diese Kräfte werden Magie genannt. Das Verändern des Weltgefüges verleiht grosse Macht, ist aber sehr gefährlich für Geist und Körper des Anwenders. Unsachgemässe Anwendung führt zu Beschädigung der Psyche, spontanes Beschwören von D\ae monen, der Umkehrung des erwünschten Effekts oder der Manifestation des gewünschten Effekts zur falschen Zeit am falschen Ort. Dabei ist die Gefahr umso grösser, je grösser die versuchte Änderung ist.
 
 Das Anwenden von Zauberei ist deshalb vor allem Wissen, wie man mit dem kleinstmöglichen Einsatz von Magie den grösstmöglichen Effekt bewirken kann. Schutzkreise, magische Gesten, seltene Substanzen und günstige astronomische Zeichen werden benutzt um die Effekte auf das Wohlergehen des Zaubernden und seine Umgebung gering zu halten. Mönche und Inquisitoren benutzen dazu rituelle Gebete. Auch schiere Willenskraft oder tiefer Glaube kann verwendet werden um die Realität zusammenzuhalten.
@@ -491,17 +481,16 @@ Das Anwenden von Zauberei ist deshalb vor allem Wissen, wie man mit dem kleinstm
 Den Riegel einer Tür zu verschieben oder das Bewegen eines kleinen Gegenstandes, sollte einen geübten Zauberer kaum fordern. Das Auslöschen einer ganzen Stadt mit einem Feuerregen, setzt einen gesamten Zaubererzirkel der Gefahr aus, von D\ae monen verschlungen zu werden und kann furchtbar schief gehen.
 
 
+%%MAGIE Das passt nicht zu dem Low-Magic Ansatz, der mir vorschwebt.
+%\section{Gefahren der Magie}
+%\begin{quotebox}
+%	\textit{Schweiss lief in Bächen über Anselms Stirn. Sein Gegner hatte ihn mit Edrich Kleiner Flammen-Incantatio überrascht und nun hing ein Flammenball drohend in der Luft. Angelockt von der Hitze trieb sich ein kleiner Flammengeist am Rande von Anselms Gesichtsfeld herum. Während Anselm gleichzeitig versuchte den Zauber auszulöschen und seinen Gegner mit einem Blitz ausser Gefecht zu setzen, brannte ihm der Elementar die Augenbrauen weg. Solchermassen ausser Fassung gebracht, gelang es ihm nicht mehr den Feuerball unter Kontrolle zu halten. Anselm griff tief in das Gewebe der Welt und schlug das Feuer mit einem Schild aus purer Energie von sich weg. Das hätte er nicht tun sollen. Unfähig, die beschworene Energie zu beherrschen, entlud diese sich in den Raum. Funken aus Feuer und Elektrizität flogen für einen kurzen Moment durch den Raum, bevor Anselm und sein Gegner völlig die Kontrolle verloren und das ganze Gebäude in einem gleissenden Blitz explodierte.
+%	}
+%\end{quotebox}
 
-\section{Gefahren der Magie}
-
-\begin{quotebox}
-	\textit{Schweiss lief in Bächen über Anselms Stirn. Sein Gegner hatte ihn mit Edrich Kleiner Flammen-Incantatio überrascht und nun hing ein Flammenball drohend in der Luft. Angelockt von der Hitze trieb sich ein kleiner Flammengeist am Rande von Anselms Gesichtsfeld herum. Während Anselm gleichzeitig versuchte den Zauber auszulöschen und seinen Gegner mit einem Blitz ausser Gefecht zu setzen, brannte ihm der Elementar die Augenbrauen weg. Solchermassen ausser Fassung gebracht, gelang es ihm nicht mehr den Feuerball unter Kontrolle zu halten. Anselm griff tief in das Gewebe der Welt und schlug das Feuer mit einem Schild aus purer Energie von sich weg. Das hätte er nicht tun sollen. Unfähig, die beschworene Energie zu beherrschen, entlud diese sich in den Raum. Funken aus Feuer und Elektrizität flogen für einen kurzen Moment durch den Raum, bevor Anselm und sein Gegner völlig die Kontrolle verloren und das ganze Gebäude in einem gleissenden Blitz explodierte.
-	}
-\end{quotebox}
-
-\subsection{Mangelnde Kontrolle}
-Bei jedem gewirktem Zauber besteht die Chance auf einen Fehlschlag. Wer etwas in Brand setzen möchte, kann das Falsche in Brand setzen. Anstatt die Herrschaft über einen beschworenen D\ae monen zu erlangen, unterwirft der D\ae mon den Beschwörer. Auch können mehrere gewirkte Zauber unvorhergesehen miteinander interagieren.
-Besonders wenn zwei Zauberer sich duellieren und unter Druck versuchen grössere Kräfte zu beherrschen als ihnen möglich ist, kann die Situation eskalieren.
+%\subsection{Mangelnde Kontrolle}
+%Bei jedem gewirktem Zauber besteht die Chance auf einen Fehlschlag. Wer etwas in Brand setzen möchte, kann das Falsche in Brand setzen. Anstatt die Herrschaft über einen beschworenen D\ae monen zu erlangen, unterwirft der D\ae mon den Beschwörer. Auch können mehrere gewirkte Zauber unvorhergesehen miteinander interagieren.
+%Besonders wenn zwei Zauberer sich duellieren und unter Druck versuchen grössere Kräfte zu beherrschen als ihnen möglich ist, kann die Situation eskalieren.
 
 \section{Der Einfluss der Sterne}
 Unter den Wissenschaftlern ist man sich einig: Die Sterne lenken den Fluss der Magie. Oder zumindest taten sie das, bevor der Komet das Gleichgewicht zerstörte. Sterne haben grosse magische Bedeutung. Gewisse Konstellationen begünstigen Rituale, die mit den entsprechenden Sternen assoziiert werden. Sternen werden seit jeher Persönlichkeiten zugeschrieben. Die Kirchen des Heiligen Geistes betrachtet das als Götzenanbeterei und gebildete Magier rümpfen die Nase über den abergläubischen Pöbel, aber sogar in ihren Reihen finden sich solche, die behaupten, einen Pakt mit einem Stern geschlossen zu haben. 
@@ -541,7 +530,7 @@ Zu untotem Scheinleben erweckt, sind diese Geschöpfe jedoch dazu verdammt, ihre
 Lykanthropen, im Volksmund auch Werwölfe genannt, leben ein weitgehend normales Leben als gewöhnlicher Mensch. Sie werden jedoch in wenigen Nächten von ihrer Krankheit heimgesucht. Während einer solchen Episode spriessen ihnen Haare aus dem ganzen Körper, sie wachsen zu gewaltiger Grösse und riesige Muskeln bewegen sich unter ihrem frischen Fell, während der Kopf tierische Züge annimmt. Es überfällt sie ein unbändigen Hunger auf Fleisch. Am nächsten Tag haben sie oft keine Erinnerung, die gerissene Schafe und schwer verletzte Kühe erklären können.
 
 %QUELLEN DER MACHT
-\section{Stätten der Macht}
+\section{Quellen der Macht}
 Überall auf Silva gibt es diese mysteriösen Orte unterschiedlichster Grösse, an denen sich Kräfte bündeln. Dort entstehen nun wahre Wunder, deren Auswirkungen auch noch mehrere Kilometer entfernt festzustellen sind. Orte der Macht werden von Menschen mit Steinkreisen, Tierschädeln und schriftlichen Warnungen gekennzeichnet. In der Lehre der Kirchen sind dies Orte, wo sich die verschiedenen Ebenen berühren.
 \begin{table*}
 	\begin{tabular}{l}
@@ -1217,5 +1206,36 @@ Ihr Auftreten sollte aber nicht darüber hinwegtäuschen, dass Pustelwichte beso
 %%\textit{Kurt entschliesst sich während seines Zuges seine Axt zu werfen (Fernkampfangriff W6), anstatt zum Gegner zu laufen und ihn zu schlagen (W8).Das ist problemlos möglich. Hätte er sich aber entschlossen, stattdessen einen Zauber zu sprechen (W10), hätte er als letztes handeln müssen.}
 %
 
+\chapter{Anhang}
+
+\section{Regeln für FATE}
+Dies sind Zusatzregeln für \textsc{Fate}. Die Basis-Regeln für Fate Core können im SRD angeschaut werden (\url{http://srd.faterpg.de/}) oder hier herutergeladen werden: \url{http://faterpg.de/fate-core-downloads/}.
+
+
+\subsection{Korrupte Aspekte}
+Die Provinz Silberwald und andere Gegenden Silvas sind von bösartigen Kräften befallen. Um diese Korruption darzustellen, sind manche Aspekte \textit{korrumpiert}. Solche Aspekte sind mit einem (K) gekennzeichnet. Wenn du bei einer Handlung einen korrumpierten Aspekt einsetzt, geschieht folgendes:
+\begin{itemize}
+	\item Du erleidet einen Punkt geistigen Stress. Anstatt diesen Stress zu nehmen, kannst du dich auch entschliessen, eine Konsequenz auf dich zu nehmen. Solltest du das tun, erhältst du zusätzlich zu den Vorteilen des Einsatzes einen Bonus auf dein Ergebnis. Dieser beträgt +2 für eine leichte, +4 für eine mittlere, +6 für eine schwere und +8 für eine extreme Konsequenz.
+	\item Jeder Aspekt, der aus dieser Handlung entsteht, ist ebenfalls \textit{korrumpiert} (K). Dies gilt insbesondere für die Konsequenzen aus dem vorherigen Punkt.
+\end{itemize}
+ 
+
+
+\begin{table*}
+	\centering
+	\scriptsize
+	\begin{tabular}{l}
+		\hline
+	\end{tabular}
+	\begin{tabularx}{\textwidth}{cXcXcX}%
+		\bfseries W100  & \bfseries Männername & \bfseries W100  & \bfseries Männername & \bfseries W100 & \bfseries Frauenname\\ 
+		&&&&&\\
+		\csvreader[head to column names]{bilder/Vornamen_m.csv}{}{\W & \Mann &\w& \mann & \ww & \frau\\}
+	\end{tabularx}
+	{Häufigste Namen 1411 bis 1497, zusammengestellt von beliebte-vornamen.de}
+	\begin{tabular}{l}
+		\hline
+	\end{tabular}
+\end{table*}
 
 \end{document}
